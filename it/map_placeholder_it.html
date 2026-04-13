@@ -25,7 +25,17 @@
   </style>
 </head>
 <body>
-
+  <!-- Language bar: dark red, language button in upper right -->
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Selettore lingua">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Cambia lingua">ITA</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Lingue disponibili">
+        <button role="menuitem" data-lang="it">ITA</button>
+        <button role="menuitem" data-lang="en">EN</button>
+        <button role="menuitem" data-lang="de">DE</button>
+      </div>
+    </div>
+  </div>
   <div class="main-head">
     <h1>Sulle tracce di Dante</h1>
   </div>
@@ -57,5 +67,6 @@
       </div>
     </section>
   </main>
+  <script src="../js/lang-switch.js"></script>
 </body>
 </html>
