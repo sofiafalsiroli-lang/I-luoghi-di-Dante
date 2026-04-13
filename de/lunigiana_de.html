@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunigiana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lunigiana – Auf Dantes Spuren">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .main-head { background: #b22222; color: #fff; }
+    .main-head h1 { color: #fff; }
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) { .section-flex-row { flex-direction: column; } }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; margin-bottom: 2.5em; }
+    .section-highlight .section-flex-row .section-text > p { border-left: none; padding-left: 0; }
+    .decorated-paragraph { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .section-text > p { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) { .page-layout, .intro-map-row { flex-direction: column; } .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; } .img-block img { max-width: 95vw; max-width: 640px; } .text-col { max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Sprachauswahl">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wechseln">DE</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Verfügbare Sprachen">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/lunigiana_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" onclick="window.location.href='../en/lunigiana_en.html'">EN</button>
+        <button role="menuitem" data-lang="de" aria-current="page">DE</button>
+      </div>
+    </div>
+  </div>
+  <div class="main-head">
+    <h1>Auf Dantes Spuren</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Hauptmenü">
+      <ul class="menu four-cols">
+        <li><a href="index_de.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTES ORTE <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_de.html">Bologna</a></li>
+            <li><a href="casentino_de.html">Casentino</a></li>
+            <li><a href="forli_de.html">Forlì</a></li>
+            <li><a href="lunigiana_de.html" aria-current="page" class="active">Lunigiana</a></li>
+            <li><a href="ravenna_de.html">Ravenna</a></li>
+            <li><a href="treviso_de.html">Treviso</a></li>
+            <li><a href="verona_de.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_de.html">KARTE</a></li>
+        <li><a href="about_de.html">ÜBER DIE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-de">
+    <h2 class="city-head">Lunigiana</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <div class="section-highlight">
+          <h3>Einführung</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Im Jahr 1306 hielt sich Dante Alighieri in der <em>Lunigiana</em> auf, wo ihn die mächtige <em>Malaspina</em>-Familie, Herrscher der Region, willkommen hieß. Insbesondere war er Gast von <em>Franceschino Malaspina</em> in <em>Mulazzo</em>, der historischen Hauptstadt des Zweigs „Spino Secco“. Während dieses Aufenthalts spielte Dante eine wichtige politische und diplomatische Rolle: Er fungierte als Friedensvermittler im Streit zwischen den Malaspina und dem Bischof von Luni, der am 6. Oktober 1306 mit dem berühmten Frieden von Castelnuovo endete. Die Verbindung zwischen Dante und der Lunigiana spiegelt sich auch in der <em>Divina Commedia</em> wider, in der der Dichter das Gebiet und seine Herrscher, insbesondere die Malaspina, genau kennt. Einige Aspekte seines Aufenthalts bleiben jedoch umstritten, insbesondere die genaue Dauer und die genauen Orte, die Dante innerhalb der Lunigiana besuchte.</p>
+              <h4>Orte in Verbindung mit Dante</h4>
+              <ul>
+                <li><em>Museo Dantesco Lunigianese</em></li>
+                <li><em>Castello di Giovagallo</em></li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interaktive Karte hier]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Museo Dantesco Lunigianese</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Das <em>Museo Dantesco Lunigianese</em> befindet sich im historischen Zentrum von <em>Mulazzo</em> und ist in einem Turmhaus aus dem 13. Jahrhundert innerhalb der mittelalterlichen Stadtmauer untergebracht.<br>
+              Gegründet 2003 vom <em>Centro Lunigianese di Studi Danteschi</em>, widmet sich das Museum der Beziehung zwischen Dante und der Lunigiana und sammelt Dokumente, Informationspaneele und Materialien, die Dantes Aufenthalt in der Region belegen.<br>
+              Die Ausstellung konzentriert sich insbesondere auf den Aufenthalt von 1306 und die Bezüge zur Lunigiana in Dantes Werk.<br>
+              Die Verbindung dieses spezifischen Gebäudes mit Dantes tatsächlichem Aufenthalt ist symbolisch: Es gibt keine Beweise, dass der Dichter tatsächlich in diesem Turmhaus lebte.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Mulazzo,_centro_storico,_panorama_01.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/lunigiana/LU_1_Mulazzo.jpg" alt="Mulazzo, Zentrum">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Mulazzo, Zentrum</span>
+                  <span class="img-credit-tooltip">
+                    Mulazzo, Zentrum<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Mulazzo,_centro_storico,_panorama_01.jpg" target="_blank">Sailko</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Castello di Giovagallo</h3>
+          <div class="section-flex-row">
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Coa_fam_ITA_malaspina_spino_secco.png" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/lunigiana/LU_2_Stemma_Spino_Secco.png" alt="Stemma Malaspina Spino Secco">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Wappen der Malaspina (Spino Secco)</span>
+                  <span class="img-credit-tooltip">
+                    Wappen der Malaspina (Spino Secco)<br>Bild: <a href="https://commons.wikimedia.org/wiki/File:Coa_fam_ITA_malaspina_spino_secco.png" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="section-text" style="flex:2;">
+              <p>Das <em>Castello di Giovagallo</em>, heute eine Ruine, war eine der Residenzen der <em>Malaspina</em> und liegt in der Nähe von <em>Mulazzo</em>.<br>
+              Hier kam Dante mit <em>Moroello Malaspina</em>, Markgraf von <em>Giovagallo</em>, in Kontakt, einer wichtigen Figur seiner Lunigiana-Erfahrung.<br>
+              Der Dichter erinnert indirekt an ihn in der <em>Divina Commedia</em> durch ein eindrucksvolles Bild, das mit der Region verbunden ist:</p>
+              <div class="quote">„Ich bin aus jener Stadt, die statt des alten<br>Den Täufer wählt als Schutzherrn. Voll Verdruß<br>Wird jener drum als Feind ihr grausam walten,<br>Und hätte man nicht noch sein Bild geschaut,<br>Das dort sich auf der Arnobrück’ erhalten,<br>Die Bürger, die sie wieder aufgebaut<br>Vom Brand des Attila, aus Schutt und Grause,<br>Sie hätten ihrer Müh’ umsonst vertraut.<br>Den Galgen macht’ ich mir aus meinem Hause.“<br><span style="font-size:0.95em;">Divina Commedia, Inferno, XIII</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h4>Quellen für den Text</h4>
+          <ul>
+            <li><a href="https://www.visittuscany.com/it/idee/sulle-orme-di-dante-in-lunigiana/" target="_blank">visittuscany.com</a></li>
+            <li><a href="https://www.comune.mulazzo.ms.it/vivere_il_comune/luoghi/luogo_5.html" target="_blank">comune.mulazzo.ms.it</a></li>
+            <li><a href="https://www.terredilunigiana.com/musei/museodantesco.php" target="_blank">terredilunigiana.com</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Casa_di_Dante_in_Lunigiana" target="_blank">Wikipedia: Casa di Dante in Lunigiana</a></li>
+            <li><a href="https://www.lunigianaworld.it/-attivita-turistiche-lunigiana/musei/museo-dantesco-lunigianese/" target="_blank">lunigianaworld.it</a></li>
+          </ul>
+          <h4>Quellen für Zitate aus der deutschen Übersetzung der Divina Commedia</h4>
+          <ul>
+            <li><a href="https://de.wikisource.org/wiki/G%C3%B6ttliche_Kom%C3%B6die_(Streckfu%C3%9F_1876)/Inferno" target="_blank">Wikisource: Göttliche Komödie (Streckfuß 1876) / Inferno</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

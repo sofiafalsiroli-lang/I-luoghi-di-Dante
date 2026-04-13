@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Bologna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bologna – Auf Dantes Spuren">
+  <link rel="icon" type="image/svg+xml" href="/Sulle-tracce-di-Dante/data/pictures/favicon.svg">
+  <link rel="stylesheet" href="/Sulle-tracce-di-Dante/css/style.css">
+  <style>
+    body { margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) {
+      .section-flex-row { flex-direction: column; }
+    }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+      margin-bottom: 2.5em;
+    }
+    .section-highlight .section-flex-row .section-text > p {
+      border-left: none;
+      padding-left: 0;
+    }
+    .decorated-paragraph {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .section-text > p {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    .main-head {
+      background: #b22222;
+      color: #fff;
+    }
+    .main-head h1 {
+      color: #fff;
+    }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) {
+      .page-layout, .intro-map-row { flex-direction: column; }
+      .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; }
+    }
+
+      .img-block img { max-width: 95vw; max-width: 640px; }
+      .text-col { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Language bar: dark red, language button in upper right -->
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Sprachauswahl">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wechseln">DE</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Verfügbare Sprachen">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/bologna_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" onclick="window.location.href='../en/bologna_en.html'">EN</button>
+        <button role="menuitem" data-lang="de" aria-current="page">DE</button>
+      </div>
+    </div>
+  </div>
+  <!-- Main head: always visible at the top of every page -->
+  <div class="main-head">
+    <h1>Auf Dantes Spuren</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Hauptmenü">
+      <ul class="menu four-cols">
+        <li><a href="index_de.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTES ORTE <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_de.html" aria-current="page" class="active">Bologna</a></li>
+            <li><a href="casentino_de.html">Casentino</a></li>
+            <li><a href="forli_de.html">Forlì</a></li>
+            <li><a href="lunigiana_de.html">Lunigiana</a></li>
+            <li><a href="ravenna_de.html">Ravenna</a></li>
+            <li><a href="treviso_de.html">Treviso</a></li>
+            <li><a href="verona_de.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_de.html">KARTE</a></li>
+        <li><a href="about_de.html">ÜBER DIE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-de">
+    <h2 class="city-head">Bologna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <!-- Einführung und Dantes Orte (section 1) -->
+        <div class="section-highlight">
+          <h3>Einführung</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Während seines Exils hielt sich Dante Alighieri auch in Bologna auf, einer der bedeutendsten Städte des mittelalterlichen Italiens, berühmt für ihre Universität und das lebendige kulturelle und juristische Leben. Die genauen Daten von Dantes Aufenthalt in Bologna sind unsicher: Es lässt sich nicht genau bestimmen, wann und wie lange er dort war. Allgemein wird jedoch angenommen, dass der Dichter die Stadt zwischen dem späten 13. und frühen 14. Jahrhundert besuchte, vermutlich zum Studium und für kulturelle Kontakte. Bologna nimmt in Dantes Werk eine wichtige Rolle ein, weniger wegen dokumentierter biografischer Ereignisse, sondern wegen der zahlreichen Erwähnungen in der Divina Commedia, die auf eine direkte Kenntnis der Stadt und ihrer politischen und sozialen Verhältnisse schließen lassen.</p>
+              <h4>Mit Dante verbundene Orte</h4>
+              <ul>
+                <li>Turm der Garisenda</li>
+                <li>Basilika San Domenico</li>
+                <li>Ehemaliges Kloster der Frati Gaudenti</li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interaktive Karte hier]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Turm der Garisenda (section 2) -->
+        <div class="section-highlight">
+          <h3>Turm der Garisenda</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Der Turm der Garisenda, im 12. Jahrhundert erbaut und heute etwa 48 Meter hoch, ist einer der berühmten „Zwei Türme“ von Bologna. Seine charakteristische Neigung, die schon im Mittelalter durch strukturelle Probleme entstand, machte ihn zu einem markanten Element der Stadtsilhouette. Dante erwähnt ihn ausdrücklich in der Divina Commedia und nutzt den Turm als Vergleich für den Riesen Antäus:</p>
+              <div class="quote">"Wie Carisend’, von unten her erblickt,<br>Sich vorzubeugen scheint und selbst zu regen,<br>Wenn Wolken ihr der Wind entgegenschickt:"<br><span style="font-size:0.95em;">Divina Commedia, Inferno, XXXI, 136-138</span></div>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/bologna/BO_1_Garisenda.jpg" alt="Turm der Garisenda">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Turm der Garisenda</span>
+                  <span class="img-credit-tooltip">
+                    Turm der Garisenda<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank">EvelinaRibarova</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Basilika San Domenico (section 3) -->
+        <div class="section-highlight">
+          <h3>Basilika San Domenico</h3>
+          <div class="section-flex-row">
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/bologna/BO_2_Basilica_S_Domenico.jpg" alt="Basilika San Domenico">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Basilika San Domenico</span>
+                  <span class="img-credit-tooltip">
+                    Basilika San Domenico<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank">Elemari-r95</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="section-text" style="flex:2;">
+              <p>Die Basilika San Domenico ist eine der wichtigsten Kirchen Bolognas, ab dem 13. Jahrhundert erbaut und eng mit Domenico di Guzmán, dem Gründer des Dominikanerordens, verbunden, der hier begraben liegt. Im Inneren der Basilika erinnert eine Gedenktafel an die Verse aus dem Paradiso, die dem Heiligen gewidmet sind:</p>
+              <div class="quote">"Dominikus ward er darum benannt;<br>Der Gärtner, welchen als Gehülfen Christus<br>Für seinen Garten wählt’ und sich verband."<br><span style="font-size:0.95em;">Divina Commedia, Paradiso, XII, 70-72</span></div>
+              <p>Diese Passage befindet sich im Himmel der Sonne, wo Dante die Weisen trifft, insbesondere Bonaventura, der das Leben des heiligen Dominikus erzählt.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Ehemaliges Kloster der Frati Gaudenti (section 4) -->
+        <div class="section-highlight">
+          <h3>Ehemaliges Kloster der Frati Gaudenti</h3>
+          <p>In der Via Arienti 40 erinnert eine Gedenktafel an das ehemalige Kloster der sogenannten „Frati Gaudenti“, Mitglieder des Ordens der Ritter der seligen Jungfrau Maria, der im 13. Jahrhundert in Bologna gegründet wurde, um den zivilen Frieden zu wahren. Dante ordnet sie in der Hölle den Heuchlern zu und kritisiert ihre moralische Korruption:</p>
+          <div class="quote">"Lustbrüder waren wir von gleichem Schlage,<br>Ich Catalano, Loderingo Er,<br>Von deiner Stadt erwählt an einem Tage,<br><br>So wie man einen Einzigen vorher,<br>Als Friedenswahrer wählt’ – und wie wir waren<br>Zeigt beim Gardingo noch sich rings umher."<br><span style="font-size:0.95em;">Divina Commedia, Inferno, XXIII, 103-108</span></div>
+        </div>
+        <!-- Quellen (section 5) -->
+        <div class="section-highlight">
+          <h4>Quellen für den Text</h4>
+          <ul>
+            <li><a href="https://www.succedesoloabologna.it/blog/dante-e-bologna/" target="_blank">succedesoloabologna.it</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Lapidi_dedicate_a_Dante_Alighieri_a_Bologna" target="_blank">Wikipedia: Lapidi dedicate a Dante Alighieri a Bologna</a></li>
+            <li><a href="https://www.treccani.it/enciclopedia/frati-gaudenti_%28Enciclopedia-Italiana%29/" target="_blank">Treccani: Frati Gaudenti</a></li>
+            <li><a href="https://www.bologna-guide.com/it/la-torre-garisenda/" target="_blank">bologna-guide.com: La Torre Garisenda</a></li>
+          </ul>
+          <h4>Quellen für Zitate aus der deutschen Übersetzung der Divina Commedia</h4>
+          <ul>
+            <li><a href="https://de.wikisource.org/wiki/G%C3%B6ttliche_Kom%C3%B6die_(Streckfu%C3%9F_1876)/Inferno" target="_blank">Wikisource: Inferno</a></li>
+            <li><a href="https://de.wikisource.org/wiki/G%C3%B6ttliche_Kom%C3%B6die_(Streckfu%C3%9F_1876)/Paradiso" target="_blank">Wikisource: Paradiso</a></li>
+            <li><a href="https://de.wikisource.org/wiki/G%C3%B6ttliche_Kom%C3%B6die_(Streckfu%C3%9F_1876)/Inferno" target="_blank">Wikisource: Inferno</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

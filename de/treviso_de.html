@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Treviso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Treviso – Auf Dantes Spuren">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .main-head { background: #b22222; color: #fff; }
+    .main-head h1 { color: #fff; }
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) { .section-flex-row { flex-direction: column; } }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; margin-bottom: 2.5em; }
+    .section-highlight .section-flex-row .section-text > p { border-left: none; padding-left: 0; }
+    .decorated-paragraph { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .section-text > p { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) { .page-layout, .intro-map-row { flex-direction: column; } .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; } .img-block img { max-width: 95vw; max-width: 640px; } .text-col { max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Sprachauswahl">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wechseln">DE</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Verfügbare Sprachen">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/treviso_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" onclick="window.location.href='../en/treviso_en.html'">EN</button>
+        <button role="menuitem" data-lang="de" aria-current="page">DE</button>
+      </div>
+    </div>
+  </div>
+  <div class="main-head">
+    <h1>Auf Dantes Spuren</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Hauptmenü">
+      <ul class="menu four-cols">
+        <li><a href="index_de.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTES ORTE <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_de.html">Bologna</a></li>
+            <li><a href="casentino_de.html">Casentino</a></li>
+            <li><a href="forli_de.html">Forlì</a></li>
+            <li><a href="lunigiana_de.html">Lunigiana</a></li>
+            <li><a href="ravenna_de.html">Ravenna</a></li>
+            <li><a href="treviso_de.html" aria-current="page" class="active">Treviso</a></li>
+            <li><a href="verona_de.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_de.html">KARTE</a></li>
+        <li><a href="about_de.html">ÜBER DIE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-de">
+    <h2 class="city-head">Treviso</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <div class="section-highlight">
+          <h3>Einführung</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Während seines Exils hatte Dante Alighieri Kontakt mit der Region Venetien und vermutlich auch mit <em>Treviso</em>, einer Stadt, die mit der Familie <em>da Camino</em> verbunden ist, einer bedeutenden lokalen Herrschaft. Die Verbindung des Dichters zur Stadt ist vor allem literarischer Natur, während der Bezug zu seinem Sohn <em>Pietro Alighieri</em> konkreter ist: Dieser lebte in <em>Treviso</em>, war dort Podestà und starb 1364 in der Stadt.</p>
+              <h4>Orte in Verbindung mit Dante</h4>
+              <ul>
+                <li><em>Ponte Dante</em></li>
+                <li><em>Chiesa di San Francesco</em></li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interaktive Karte hier]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Ponte Dante</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Der <em>Ponte Dante</em> befindet sich an der Stelle, an der der <em>Cagnan</em>-Fluss in den <em>Sile</em> mündet, eine der malerischsten Ansichten der Stadt. Ursprünglich als „Brücke des Unmöglichen“ bekannt, aufgrund der Schwierigkeiten beim Bau, wurde sie 1865 anlässlich des sechshundertsten Geburtstages von Dante umbenannt. An diesem Anlass wurde eine Gedenksäule errichtet, die Dantes Profil und einen berühmten Vers aus dem <em>Paradiso</em> zeigt, wodurch der Ort zu einem der wichtigsten Dante-Gedenkpunkte der Stadt wurde:</p>
+              <div class="quote">„Und dort, wo sich Cagnan mit Sile paart“<br><span style="font-size:0.95em;">Divina Commedia, Paradiso, IX, 49</span></div>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Treviso_-_Ponte_Dante_-_2023-09-08_15-10-37_001.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/treviso/TR_1_Ponte_Dante.jpg" alt="Ponte Dante">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Ponte Dante</span>
+                  <span class="img-credit-tooltip">
+                    Ponte Dante<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Treviso_-_Ponte_Dante_-_2023-09-08_15-10-37_001.jpg" target="_blank">Liridon</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Chiesa di San Francesco</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Die <em>Chiesa di San Francesco</em>, erbaut im 13. Jahrhundert, ist eines der wichtigsten religiösen Gebäude in <em>Treviso</em> und bewahrt bedeutende künstlerische und historische Zeugnisse. Im Inneren befindet sich das Grab von <em>Pietro Alighieri</em>, Dantes Sohn, der lange in Venetien lebte und 1364 in <em>Treviso</em> starb. Die Verbindung zu Dante ist daher indirekt: Es gibt keine Belege dafür, dass der Dichter die Kirche besucht hat, doch durch die Anwesenheit seines Sohnes wird der Ort für die Dante-Erinnerung besonders bedeutend.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Chiesa_Convento_San_Francesco_Facciata_Treviso.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/treviso/TR_2_Chiesa_S_Francesco.jpg" alt="Chiesa di San Francesco">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Chiesa di San Francesco</span>
+                  <span class="img-credit-tooltip">
+                    Chiesa di San Francesco<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Chiesa_Convento_San_Francesco_Facciata_Treviso.jpg" target="_blank">Didier Descouens</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h4>Quellen für den Text</h4>
+          <ul>
+            <li><a href="https://treviso.italiani.it/dante-treviso/" target="_blank">treviso.italiani.it</a></li>
+            <li><a href="https://www.dante.global/it/italia-di-dante/treviso" target="_blank">dante.global: Italia di Dante</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Treviso" target="_blank">Wikipedia: Treviso</a></li>
+            <li><a href="https://travelitalia.com/it/treviso/ponte-dante/" target="_blank">travelitalia.com: Ponte Dante</a></li>
+            <li><a href="https://www.zainoo.com/it/guida-italia/veneto/treviso/chiesa-san-francesco" target="_blank">zainoo.com: Chiesa San Francesco</a></li>
+          </ul>
+          <h4>Quellen für Zitate aus der deutschen Übersetzung der Divina Commedia</h4>
+          <ul>
+            <li><a href="https://de.wikisource.org/wiki/G%C3%B6ttliche_Kom%C3%B6die_(Streckfu%C3%9F_1876)/Paradiso" target="_blank">Wikisource: Göttliche Komödie (Streckfuß 1876) / Paradiso</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

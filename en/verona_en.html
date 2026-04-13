@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verona</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verona – In Dante's Footsteps">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) {
+      .section-flex-row { flex-direction: column; }
+    }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+      margin-bottom: 2.5em;
+    }
+    .section-highlight .section-flex-row .section-text > p {
+      border-left: none;
+      padding-left: 0;
+    }
+    .decorated-paragraph {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .section-text > p {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    .main-head {
+      background: #b22222;
+      color: #fff;
+    }
+    .main-head h1 {
+      color: #fff;
+    }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) {
+      .page-layout, .intro-map-row { flex-direction: column; }
+      .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; }
+      .img-block img { max-width: 95vw; max-width: 640px; }
+      .text-col { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Language bar: dark red, language button in upper right -->
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Language selector">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">EN</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Available languages">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/verona_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" aria-current="page">EN</button>
+        <button role="menuitem" data-lang="de" onclick="window.location.href='../German_pages/verona_de.html'">DE</button>
+      </div>
+    </div>
+      <hr>
+      <section class="sources">
+        <h3>Sources for quotes from the Divina Commedia</h3>
+        <ul>
+          <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_1/Canto_15" target="_blank">Divine Comedy (Longfellow), Inferno, Canto XV</a></li>
+          <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_2/Canto_6" target="_blank">Divine Comedy (Longfellow), Purgatorio, Canto VI</a></li>
+          <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_3/Canto_17" target="_blank">Divine Comedy (Longfellow), Paradiso, Canto XVII</a></li>
+        </ul>
+      </section>
+  </div>
+  <!-- Main head: always visible at the top of every page -->
+  <div class="main-head">
+    <h1>On Dante's Trail</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Main menu">
+      <ul class="menu four-cols">
+        <li><a href="index_en.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTE'S PLACES <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_en.html">Bologna</a></li>
+            <li><a href="casentino_en.html">Casentino</a></li>
+            <li><a href="forli_en.html">Forlì</a></li>
+            <li><a href="lunigiana_en.html">Lunigiana</a></li>
+            <li><a href="ravenna_en.html">Ravenna</a></li>
+            <li><a href="treviso_en.html">Treviso</a></li>
+            <li><a href="verona_en.html" aria-current="page" class="active">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_en.html">MAP</a></li>
+        <li><a href="about_en.html">ABOUT THE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-en">
+    <h2 class="city-head">Verona</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <!-- Introduction and Dante's Places (section 1) -->
+        <div class="section-highlight">
+          <h3>Introduction</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>In 1303, shortly after his exile from Florence, Dante Alighieri found one of his first refuges in <em>Verona</em> at the court of <em>Bartolomeo della Scala</em>, lord of the city from 1301 to 1304 and a member of the powerful <em>Scaliger</em> family.<br>In a Ghibelline-oriented <em>Verona</em>, open to hosting political exiles and intellectuals, Dante was welcomed with the courtesy and generosity traditionally attributed to the “<em>gran Lombardo</em>” mentioned in the <em>Paradiso</em>:</p>
+              <div class="quote">"Thine earliest refuge and thine earliest inn<br>Shall be the mighty Lombard's courtesy,<br>Who on the Ladder bears the holy bird,"<br><span style="font-size:0.95em;">Divina Commedia, Paradiso, XVII, 70-72</span></div>
+              <p>After this first stay, Dante returned to <em>Verona</em> between 1312 and 1318, finding protection under <em>Cangrande della Scala</em>, a central figure in Italian politics of the time and a well-known patron.<br>During this longer and more stable period, the city became not only a refuge for the poet but also a lively cultural center where he could continue his literary and political activities, strengthening the connection between his exile experience and the <em>Scaliger</em> environment.</p>
+              <h4>Places associated with Dante</h4>
+              <ul>
+                <li><em>Piazza Dante</em></li>
+                <li><em>Chiesa di Sant'Elena</em></li>
+                <li><em>Casa di Romeo</em></li>
+                <li><em>Porta Borsari</em></li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interactive map here]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 1: Piazza Dante -->
+        <div class="section-highlight">
+          <h3>Piazza dei Signori (Piazza Dante)</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p><em>Piazza dei Signori</em>, also known as <em>Piazza Dante</em>, located in the heart of <em>Verona</em>, hosts a statue of the poet and symbolizes the local memory of Dante’s stay in the Scaliger city.<br>The modern statue depicts Dante in a thoughtful pose, gazing toward the city center, commemorating not only his presence but also the significance of his work for Veronese and Italian culture.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Piazza_dei_Signori_(Verona)_-_Casa_della_Piet%C3%A0.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/verona/VR_1_Piazza_Dante.jpg" alt="Dante Square">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Dante Square</span>
+                  <span class="img-credit-tooltip">
+                    Dante Square<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Piazza_dei_Signori_(Verona)_-_Casa_della_Piet%C3%A0.jpg" target="_blank">Didier Descouens</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 2: Chiesa di Sant'Elena -->
+        <div class="section-highlight">
+          <h3>Chiesa di Sant'Elena</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>The <em>Chiesa di Sant’Elena</em> in <em>Verona</em> is one of the main religious sites in the historic center.<br>Local tradition closely associates it with Dante’s stay at the court of <em>Cangrande della Scala</em>.<br>According to chronicles, in January 1320, Dante presented to the canons and local scholars his famous <em>"Quaestio de aqua et terra"</em>, a Latin treatise discussing one of the most debated cosmological questions of the time: whether water naturally lies above or below the land relative to sea level.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Duomo_(Verona)_-_Sant%27Elena_(Verona)_-_Facade.JPG" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/verona/VR_2_Chiesa_S_Elena.jfif" alt="Church of Saint Helena">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Church of Saint Helena</span>
+                  <span class="img-credit-tooltip">
+                    Church of Saint Helena<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Duomo_(Verona)_-_Sant%27Elena_(Verona)_-_Facade.JPG" target="_blank">Verona Cathedral</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 3: Casa di Romeo -->
+        <div class="section-highlight">
+          <h3>Casa di Romeo</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>The so-called <em>Casa di Romeo</em> in <em>Verona</em>, located in the historic center, is a symbolic site linked to the city’s Shakespearean legend.<br>It also holds particular significance in the Dantean context. In the <em>Purgatorio</em>, Dante invites the emperor to observe the tragic political situation in Italy, marked by rivalry and internal conflicts, citing the families of the <em>Montecchi</em> and the <em>Cappelletti</em> as examples, who would later appear in Shakespeare’s famous drama:</p>
+              <div class="quote">"Come and behold Montecchi and Cappelletti,<br>Monaldi and Fillippeschi, careless man!<br>Those sad already, and these doubt-depressed!"<br><span style="font-size:0.95em;">Divina Commedia, Purgatorio, VI, 106-108</span></div>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Casa_di_Cagnolo_Nogarola_(Casa_di_Romeo),_Verona_(37779314011).jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/verona/VR_3_Casa_Romeo.jpg" alt="Romeo's House">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Romeo's House</span>
+                  <span class="img-credit-tooltip">
+                    Romeo's House<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Casa_di_Cagnolo_Nogarola_(Casa_di_Romeo),_Verona_(37779314011).jpg" target="_blank">Dimitris Kamaras from Athens, Greece</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 4: Porta Borsari -->
+        <div class="section-highlight">
+          <h3>Porta Borsari</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p><em>Porta Borsari</em>, one of the main gates of Roman and medieval <em>Verona</em>, marked the boundary between the city and the roads connecting to the Po Valley.<br>Located along the historic <em>Via Postumia</em>, it was a strategic passage for merchants, pilgrims, and travelers, as well as a symbolic place of urban life.<br>A plaque on this stretch of the city commemorates the <em>Palio del Drappo Verde</em>, an ancient medieval race. Tradition holds that teams from different districts competed along the main streets, and Dante refers to this race in the <em>Divina Commedia</em> as a symbol to describe movement, competitions, and social rivalries:</p>
+              <div class="quote">"Then he turned round, and seemed to be of those<br>Who at Verona run for the Green Mantle<br>Across the plain; and seemed to be among them<br><br>The one who wins, and not the one who loses."<br><span style="font-size:0.95em;">Divina Commedia, Inferno, XV, 121-123</span></div>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Porta_Borsari_(Verona).jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/verona/VR_4_Porta_Borsari.jpg" alt="Porta Borsari">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Porta Borsari</span>
+                  <span class="img-credit-tooltip">
+                    Porta Borsari<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Porta_Borsari_(Verona).jpg" target="_blank">Didier Descouens</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sources (section 5) -->
+        <div class="section-highlight">
+          <h4>Sources for the text</h4>
+          <ul>
+            <li><a href="https://www.visitverona.it/it/luoghi/sulle-tracce-di-dante-alighieri" target="_blank">visitverona.it: Sulle tracce di Dante Alighieri</a></li>
+            <li><a href="https://www.veronissima.com/sito_italiano/html/temi_dante.html" target="_blank">veronissima.com: Temi danteschi</a></li>
+            <li><a href="https://www.dante.global/it/italia-di-dante/verona" target="_blank">dante.global: Italia di Dante</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Dante_Alighieri" target="_blank">Wikipedia: Dante Alighieri</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Cangrande_della_Scala" target="_blank">Wikipedia: Cangrande della Scala</a></li>
+          </ul>
+          <h4>Sources for quotes from the English translation of the <em>Divina Commedia</em></h4>
+          <ul>
+            <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_3/Canto_17" target="_blank">Wikisource: Paradiso, Canto XVII</a></li>
+            <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_2/Canto_6" target="_blank">Wikisource: Purgatorio, Canto VI</a></li>
+            <li><a href="https://en.wikisource.org/wiki/Divine_Comedy_(Longfellow_1867)/Volume_1/Canto_15" target="_blank">Wikisource: Inferno, Canto XV</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

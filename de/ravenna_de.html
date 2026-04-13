@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Ravenna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ravenna – Auf Dantes Spuren">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .main-head { background: #b22222; color: #fff; }
+    .main-head h1 { color: #fff; }
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) { .section-flex-row { flex-direction: column; } }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; margin-bottom: 2.5em; }
+    .section-highlight .section-flex-row .section-text > p { border-left: none; padding-left: 0; }
+    .decorated-paragraph { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .section-text > p { border-left: 5px solid #b22222; padding-left: 1.2em; margin-left: 0; }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) { .page-layout, .intro-map-row { flex-direction: column; } .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; } .img-block img { max-width: 95vw; max-width: 640px; } .text-col { max-width: 100%; } }
+  </style>
+</head>
+<body>
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Sprachauswahl">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wechseln">DE</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Verfügbare Sprachen">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/ravenna_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" onclick="window.location.href='../en/ravenna_en.html'">EN</button>
+        <button role="menuitem" data-lang="de" aria-current="page">DE</button>
+      </div>
+    </div>
+  </div>
+  <div class="main-head">
+    <h1>Auf Dantes Spuren</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Hauptmenü">
+      <ul class="menu four-cols">
+        <li><a href="index_de.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTES ORTE <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_de.html">Bologna</a></li>
+            <li><a href="casentino_de.html">Casentino</a></li>
+            <li><a href="forli_de.html">Forlì</a></li>
+            <li><a href="lunigiana_de.html">Lunigiana</a></li>
+            <li><a href="ravenna_de.html" aria-current="page" class="active">Ravenna</a></li>
+            <li><a href="treviso_de.html">Treviso</a></li>
+            <li><a href="verona_de.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_de.html">KARTE</a></li>
+        <li><a href="about_de.html">ÜBER DIE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-de">
+    <h2 class="city-head">Ravenna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <div class="section-highlight">
+          <h3>Einführung</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Ravenna war die letzte Stadt, in der Dante Alighieri lebte. Er kam 1318 auf Einladung von <em>Francesco da Polenta</em>, genannt <em>Francesco “il Vecchio”</em>, der ihn in seiner Residenz aufnahm und bis zu seinem Tod 1321 beschützte. Für Dante wurde Ravenna zu einem echten Zuhause, wo er in relativer Ruhe arbeiten konnte. Seine Anwesenheit in der Stadt ist historisch belegt: Er erhielt eine Rente vom Stadtrat und setzte literarische sowie politische Projekte bis zu seinem Tod fort. Ravenna bewahrt noch heute zahlreiche Bezüge zu seiner Erinnerung, sowohl in institutionellen Stätten als auch in Kunst und urbaner Kultur.</p>
+              <h4>Orte in Verbindung mit Dante</h4>
+              <ul>
+                <li><em>Museo Dante</em></li>
+                <li><em>Tomba di Dante</em></li>
+                <li><em>Quadrarco di Braccioforte</em></li>
+                <li><em>Dante-Mural von Kobra</em></li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interaktive Karte hier]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Museo Dante</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Das <em>Museo Dante</em> in Ravenna, im ersten Stock des alten Franziskanerklosters neben Dantes Grab, ist einer der Hauptorte, die dem Andenken und Werk von Dante Alighieri gewidmet sind. Gegründet 1921 anlässlich des sechshundertsten Todestages und in jüngster Zeit umfassend erneuert, bietet das Museum heute eine moderne, immersive Ausstellung in mehreren Räumen, die Besucher durch Dantes Leben, Werk und Nachwirkung führt. Zu den bedeutendsten Exponaten gehören die hölzerne Kassette, die Dantes Knochen jahrhundertelang aufbewahrte, und die Arkade, die 1865 für deren Ausstellung verwendet wurde, Zeugnisse der komplexen Geschichte seiner Überreste.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:DanteMuseum02.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_1_Museo_Dante.jpg" alt="Büste von Dante im Dante-Museum">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Büste von Dante im Dante-Museum</span>
+                  <span class="img-credit-tooltip">
+                    Büste von Dante im Dante-Museum<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:DanteMuseum02.jpg" target="_blank">Georges Jansoone</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Tomba di Dante</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Die <em>Tomba di Dante</em> in Ravenna, neben der <em>Basilica di San Francesco</em> im sogenannten „Stillen Bereich“, ist der Ort, an dem der Dichter seit 1321 ruht. Ursprünglich war es eine einfache Kapelle, von <em>Guido Novello da Polenta</em> gestiftet, die über die Jahre mehrfach umgestaltet wurde: 1483 erhielt sie ein Relief von <em>Pietro Lombardo</em>, zwischen 1780 und 1782 wurde das heutige neoklassizistische Mausoleum nach Entwurf von <em>Camillo Morigia</em> errichtet. Im Inneren befinden sich Dantes Überreste und ein lateinisches Epitaph von <em>Bernardo Canaccio</em>, das die Größe des Dichters und sein Exil würdigt:</p>
+              <div class="quote">„Iura monarchiae, superos, Phlegetonta lacusque<br>lustrando cecini, voluerunt fata quousque;<br>sed quia pars cessit melioribus hospita castris,<br>actoremque suum petiit felicior astris,<br>hic claudor Dantes, patriis extorris ab oris<br>quem genuit parvi Florentia mater amoris“<br><br>„Die Rechte der Herrschaft, die Himmel, den Phlegethon und die Seen<br>besang ich, indem ich sie durchwanderte, so weit es das Schicksal erlaubte;<br>doch weil der bessere Teil in freundlichere Lager überging<br>und seinen Schöpfer glücklicher zu den Sternen suchte,<br>werde ich hier eingeschlossen, Dante, verbannt aus dem väterlichen Land,<br>den Florenz, die Mutter wenigster Liebe, geboren hat.“</div>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Ravenna,_tomba_di_Dante_(05).jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_2_Tomba_Dante.jpg" alt="Dantes Grab">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Dantes Grab</span>
+                  <span class="img-credit-tooltip">
+                    Dantes Grab<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Ravenna,_tomba_di_Dante_(05).jpg" target="_blank">Gianni Careddu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Quadrarco di Braccioforte</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Der <em>Quadrarco di Braccioforte</em>, in der Nähe von Dantes Grab gelegen, ist einer der bedeutendsten Orte der Dante-Erinnerung in Ravenna. Nach Dantes Tod 1321 wurden seine Überreste zunächst in einem einfachen Sarkophag in der <em>Basilica di San Francesco</em> aufbewahrt, auf Wunsch von <em>Guido Novello da Polenta</em>. 1483 wurde das Grab unter <em>Bernardo Bembo</em>, venezianischer Gouverneur, erneuert, doch zwischen dem 16. und 18. Jahrhundert wurde das Schicksal der Knochen kompliziert: Um sie vor Ansprüchen aus Florenz zu schützen, versteckten die Franziskaner sie mehrfach, etwa zwei Jahrhunderte lang. 1677 wurden sie auch im <em>Quadrarco</em> eingeschlossen, wie die Inschrift auf der Kassette belegt: „Dantis ossa a me Fra Antonio Santi hic posita anno 1677 die 18 octobris“. Nach dem Bau des neuen neoklassizistischen Mausoleums (1780–1782) kehrten die Überreste kurzzeitig zurück, doch 1810, mit der napoleonischen Auflösung der Orden, versteckten die Mönche sie erneut in einer Wand des <em>Quadrarco</em>. Am 25. Mai 1865 entdeckte ein Arbeiter während Wartungsarbeiten zufällig die Kassette; dank des Studenten <em>Anastasio Matteucci</em> wurde sie gerettet und identifiziert. Die Knochen wurden wieder zusammengesetzt, einige Monate in einer Kristallurne ausgestellt und schließlich endgültig im Mausoleum beigesetzt. Während des Zweiten Weltkriegs wurden die Überreste vorsorglich zwischen 1944 und 1945 vorübergehend in einem Hügel im nahen Garten beigesetzt. Eine Tafel erinnert noch heute an diesen Schutz in schwierigen Zeiten.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Ravenna_-_Tomba_di_Dante_-_La_targa_nel_quadrarco_di_Braccioforte.JPG" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_3_Quadraco_Braccioforte.jfif" alt="Quadrarco di Braccioforte">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Quadrarco di Braccioforte</span>
+                  <span class="img-credit-tooltip">
+                    Quadrarco di Braccioforte<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Ravenna_-_Tomba_di_Dante_-_La_targa_nel_quadrarco_di_Braccioforte.JPG" target="_blank">Monica Rondoni</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h3>Dante-Mural von Kobra</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Das berühmte <em>Dante-Mural</em> des brasilianischen Künstlers <em>Kobra</em> ist ein modernes Symbol für die anhaltende Verehrung Dantes in Ravenna. Das farbenfrohe Wandbild befindet sich in der Nähe des Bahnhofs und verbindet klassische Ikonographie mit zeitgenössischer Street-Art.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Dante_Alighieri_2.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/ra_4_murales_dante.jpg" alt="Dante-Mural von Kobra">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Dante-Mural von Kobra</span>
+                  <span class="img-credit-tooltip">
+                    Dante-Mural von Kobra<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Dante_Alighieri_2.jpg" target="_blank">Renzo favalli</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h4>Quellen für den Text</h4>
+          <ul>
+            <li><a href="https://www.turismo.ra.it/de/entdecken/dante-in-ravenna/" target="_blank">turismo.ra.it</a></li>
+            <li><a href="https://www.ravennatourism.com/de/entdecken/dante-in-ravenna/" target="_blank">ravennatourism.com</a></li>
+            <li><a href="https://de.wikipedia.org/wiki/Dante_Alighieri" target="_blank">Wikipedia: Dante Alighieri</a></li>
+            <li><a href="https://www.museodante.ra.it/" target="_blank">Museo Dante Ravenna</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

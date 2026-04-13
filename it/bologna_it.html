@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Bologna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bologna – Sulle tracce di Dante">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) {
+      .section-flex-row { flex-direction: column; }
+    }
+    /* Postcard frame effect for Bologna images */
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    /* Remove inner border for intro section */
+    .section-highlight .section-flex-row .section-text > p {
+      border-left: none;
+      padding-left: 0;
+    }
+    .decorated-paragraph {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .section-text > p {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    .main-head {
+      background: #b22222;
+      color: #fff;
+    }
+    .main-head h1 {
+      color: #fff;
+    }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) {
+      .page-layout, .intro-map-row { flex-direction: column; }
+      .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; }
+      .img-block img { max-width: 95vw; max-width: 640px; }
+      .text-col { max-width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Language bar: dark red, language button in upper right -->
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Language selector">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">ITA</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Available languages">
+        <button role="menuitem" data-lang="it" aria-current="page" class="active">ITA</button>
+        <a href="../English/bologna_en.html" role="menuitem" data-lang="en">EN</a>
+        <a href="../German_pages/bologna_de.html" role="menuitem" data-lang="de">DE</a>
+      </div>
+    </div>
+  </div>
+  <!-- Main head: always visible at the top of every page -->
+  <div class="main-head">
+    <h1>Sulle tracce di Dante</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Menu principale">
+      <ul class="menu four-cols">
+        <li><a href="index_it.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">I LUOGHI DI DANTE <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_it.html" aria-current="page" class="active">Bologna</a></li>
+            <li><a href="casentino_it.html">Casentino</a></li>
+            <li><a href="forli_it.html">Forlì</a></li>
+            <li><a href="lunigiana_it.html">Lunigiana</a></li>
+            <li><a href="ravenna_it.html">Ravenna</a></li>
+            <li><a href="treviso_it.html">Treviso</a></li>
+            <li><a href="verona_it.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="../../map_placeholder.html">MAPPA</a></li>
+        <li><a href="about_it.html">ABOUT THE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Menu principale">
+      <ul class="menu four-cols">
+        <li><a href="../index.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">I LUOGHI DI DANTE <span class="dropdown-arrow">&#9660;</span></a>
+          <!-- Only one triangle is present, no pseudo-element or duplicate -->
+          <ul class="dropdown-content">
+            <li><a href="bologna_it.html" aria-current="page" class="active">Bologna</a></li>
+            <li><a href="casentino_it.html">Casentino</a></li>
+            <li><a href="forli_it.html">Forlì</a></li>
+            <li><a href="lunigiana_it.html">Lunigiana</a></li>
+            <li><a href="ravenna_it.html">Ravenna</a></li>
+            <li><a href="treviso_it.html">Treviso</a></li>
+            <li><a href="verona_it.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="../../map_placeholder.html">MAPPA</a></li>
+        <li><a href="about_it.html">ABOUT THE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- All page content must come after header/main-head/lang-bar -->
+  <div class="lang-section lang-it">
+    <h2 class="city-head">Bologna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <div class="section-highlight">
+          <h3>Introduzione</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Durante il suo esilio, Dante Alighieri soggiornò anche a Bologna, una delle città più importanti dell’Italia comunale, celebre per la sua università e per il vivace ambiente culturale e giuridico. Le informazioni sulla permanenza di Dante a Bologna sono particolarmente incerte: non è possibile stabilire con precisione quando e per quanto tempo vi abbia soggiornato. Tuttavia, è generalmente accettato che il poeta abbia frequentato la città tra la fine del XIII e l’inizio del XIV secolo, probabilmente anche per motivi di studio e contatti culturali. Bologna occupa un posto significativo nell’opera dantesca, non tanto per eventi biografici documentati, quanto per i numerosi riferimenti presenti nella Divina Commedia, che testimoniano una conoscenza diretta della città e delle sue realtà politiche e sociali.<br><br></p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Mappa interattiva qui]</span>
+              </div>
+            </div>
+          </div>
+          <h3>Luoghi legati a Dante</h3>
+          <ul>
+            <li>Torre della Garisenda</li>
+            <li>Basilica di San Domenico</li>
+            <li>Ex convento dei Frati Gaudenti</li>
+          </ul>
+        </div>
+        <br><br><br><br>
+        <div class="section-highlight">
+          <h3>Torre della Garisenda</h3>
+          <div class="section-flex-row">
+          <div class="section-text" style="flex:2;">
+            <p>
+              La Torre della Garisenda, costruita nel XII secolo e oggi alta circa 48 metri, è una delle celebri "Due Torri" di Bologna. La sua caratteristica inclinazione, dovuta a problemi strutturali già in epoca medievale, la rese un elemento distintivo del paesaggio urbano. Dante la cita esplicitamente nella Divina Commedia, utilizzandola come termine di paragone visivo per descrivere il gigante Anteo:<br><br>
+              <em>"Qual pare a riguardar la Carisenda"<br>sotto ’l chinato, quando un nuvol vada<br>sovr’essa sì, che ella in contrario penda"</em><br>
+              <span style="font-size:0.95em;">Divina Commedia, Inferno, XXXI, 136-138</span><br><br><br><br>
+            </p>
+          </div>
+          <div class="section-img" style="flex:1;">
+            <div class="img-block">
+              <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank" tabindex="-1">
+                  <img src="../../data/pictures/bologna/BO_1_Garisenda.jpg" alt="Torre della Garisenda">
+                </a>
+                <span class="img-caption" style="display:block; margin-top:0.3em;">Torre della Garisenda</span>
+                <span class="img-credit-tooltip">
+                  Torre della Garisenda<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank">EvelinaRibarova</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+                </span>
+              </span>
+            </div>
+          </div>
+          </div>
+        </div>
+        <br><br><br><br>
+        <div class="section-highlight">
+          <h3>Basilica di San Domenico</h3>
+          <div class="section-flex-row">
+          <div class="section-img" style="flex:1;">
+            <div class="img-block">
+              <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank" tabindex="-1">
+                  <img src="../../data/pictures/bologna/BO_2_Basilica_S_Domenico.jpg" alt="Basilica di San Domenico">
+                </a>
+                <span class="img-caption" style="display:block; margin-top:0.3em;">Basilica di San Domenico</span>
+                <span class="img-credit-tooltip">
+                  Basilica di San Domenico<br>Foto: <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank">Elemari-r95</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="section-text" style="flex:2;">
+            <p>
+              La Basilica di San Domenico è uno dei principali edifici religiosi di Bologna, costruita a partire dal XIII secolo e legata alla figura di Domenico di Guzmán, fondatore dell’ordine domenicano, sepolto proprio qui. All’interno della basilica, una lapide riporta i versi del Paradiso dedicati al santo:<br><br>
+              <em>"Domenico fu detto; e io ne parlo"<br>sì come de l’agricola che Cristo<br>elesse a l’orto suo per aiutarlo"</em><br>
+              <span style="font-size:0.95em;">Divina Commedia, Paradiso, XII, 70-72</span><br><br><br><br>
+            </p>
+          </div>
+          </div>
+        </div>
+        <div class="section-highlight">
+          <h4>Fonti per il testo</h4>
+          <ul>
+            <li><a href="https://www.succedesoloabologna.it/blog/dante-e-bologna/" target="_blank">succedesoloabologna.it</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Lapidi_dedicate_a_Dante_Alighieri_a_Bologna" target="_blank">Wikipedia: Lapidi dedicate a Dante Alighieri a Bologna</a></li>
+            <li><a href="https://www.treccani.it/enciclopedia/frati-gaudenti_%28Enciclopedia-Italiana%29/" target="_blank">Treccani: Frati Gaudenti</a></li>
+            <li><a href="https://www.bologna-guide.com/it/la-torre-garisenda/" target="_blank">bologna-guide.com: La Torre Garisenda</a></li>
+          </ul>
+          <h4>Fonti per le citazioni dalla Divina Commedia</h4>
+          <ul>
+            <li><a href="https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_XXXI" target="_blank">Wikisource: Inferno, Canto XXXI</a></li>
+            <li><a href="https://it.wikisource.org/wiki/Divina_Commedia/Paradiso/Canto_XII" target="_blank">Wikisource: Paradiso, Canto XII</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lang-section lang-en" style="display:none;">
+    <h2 class="city-head">Bologna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <h3>English</h3>
+        <p>During his exile, Dante Alighieri also spent time in Bologna, one of the most influential cities of medieval Italy, renowned for its university and vibrant cultural and legal life. Details about Dante’s stay in Bologna remain uncertain: Es lässt sich nicht genau bestimmen, wann und wie lange er dort war. Allgemein wird jedoch angenommen, dass der Dichter die Stadt zwischen dem späten 13. und frühen 14. Jahrhundert besuchte, vermutlich zum Studium und für kulturelle Kontakte. Bologna nimmt in Dantes Werk eine wichtige Rolle ein, weniger wegen dokumentierter biografischer Ereignisse, sondern wegen der zahlreichen Erwähnungen in der Divina Commedia, die auf eine direkte Kenntnis der Stadt und ihrer politischen und sozialen Verhältnisse schließen lassen.</p>
+        <ul>
+          <li><i>Torre della Garisenda</i></li>
+          <li><i>Basilica di San Domenico</i></li>
+          <li>Former Convent of the <i>Frati Gaudenti</i></li>
+        </ul>
+        <h4>Torre della Garisenda</h4>
+        <div class="img-block" style="float:right; margin:0 0 1em 2em; max-width:200px; text-align:center;">
+          <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+            <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank" tabindex="-1">
+                  <img src="../../data/pictures/bologna/BO_1_Garisenda.jpg" 
+                   alt="Torre della Garisenda" 
+                   title="Torre della Garisenda&#10;Photo: EvelinaRibarova, CC BY-SA 4.0, via Wikimedia Commons">
+            </a>
+            <span class="img-caption" style="font-size:0.95em; display:block; margin-top:0.3em;">Torre della Garisenda</span>
+            <span class="img-credit-tooltip" style="display:none; position:absolute; left:50%; transform:translateX(-50%); bottom:110%; background:#fff; color:#333; border:1px solid #ccc; border-radius:6px; padding:0.5em 1em; font-size:0.85em; z-index:10; white-space:nowrap; box-shadow:0 2px 8px #bbb;">
+              Photo: <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank">EvelinaRibarova</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+            </span>
+          </span>
+        </div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <h4>Basilica of San Domenico</h4>
+        <div class="img-block" style="float:left; margin:0 2em 1em 0; max-width:200px; text-align:center;">
+          <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+            <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank" tabindex="-1">
+                  <img src="../../data/pictures/bologna/BO_2_Basilica_S_Domenico.jpg" 
+                   alt="Basilica di San Domenico" 
+                   title="Basilica di San Domenico&#10;Photo: Elemari-r95, CC BY-SA 4.0, via Wikimedia Commons">
+            </a>
+            <span class="img-caption" style="font-size:0.95em; display:block; margin-top:0.3em;">Basilica di San Domenico</span>
+            <span class="img-credit-tooltip" style="display:none; position:absolute; left:50%; transform:translateX(-50%); bottom:110%; background:#fff; color:#333; border:1px solid #ccc; border-radius:6px; padding:0.5em 1em; font-size:0.85em; z-index:10; white-space:nowrap; box-shadow:0 2px 8px #bbb;">
+              Photo: <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank">Elemari-r95</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+            </span>
+          </span>
+        </div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <h4>Former Convent of the Frati Gaudenti</h4>
+        <div class="quote">"Frati godenti fummo, e bolognesi;"</div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="lang-section lang-de" style="display:none;">
+    <h2 class="city-head">Bologna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <h3>Deutsch</h3>
+        <p>Während seines Exils hielt sich Dante Alighieri auch in Bologna auf, einer der bedeutendsten Städte des mittelalterlichen Italiens, berühmt für ihre Universität und das lebendige kulturelle und juristische Leben. Die genauen Daten von Dantes Aufenthalt in Bologna sind unsicher: Es lässt sich nicht genau bestimmen, wann und wie lange er dort war. Allgemein wird jedoch angenommen, dass der Dichter die Stadt zwischen dem späten 13. und frühen 14. Jahrhundert besuchte, vermutlich zum Studium und für kulturelle Kontakte. Bologna nimmt in Dantes Werk eine wichtige Rolle ein, weniger wegen dokumentierter biografischer Ereignisse, sondern wegen der zahlreichen Erwähnungen in der Divina Commedia, die auf eine direkte Kenntnis der Stadt und ihrer politischen und sozialen Verhältnisse schließen lassen.</p>
+        <ul>
+          <li>Turm der Garisenda</li>
+          <li>Basilika San Domenico</li>
+          <li>Ehemaliges Kloster der Frati Gaudenti</li>
+        </ul>
+        <h4>Turm der Garisenda</h4>
+        <div class="img-block" style="float:right; margin:0 0 1em 2em; max-width:200px; text-align:center;">
+          <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+            <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank" tabindex="-1">
+              <img src="../data/pictures/bologna/BO_1_Garisenda.jpg" 
+                   alt="Turm der Garisenda" 
+                   title="Turm der Garisenda&#10;Foto: EvelinaRibarova, CC BY-SA 4.0, via Wikimedia Commons">
+            </a>
+            <span class="img-caption" style="font-size:0.95em; display:block; margin-top:0.3em;">Torre della Garisenda</span>
+            <span class="img-credit-tooltip" style="display:none; position:absolute; left:50%; transform:translateX(-50%); bottom:110%; background:#fff; color:#333; border:1px solid #ccc; border-radius:6px; padding:0.5em 1em; font-size:0.85em; z-index:10; white-space:nowrap; box-shadow:0 2px 8px #bbb;">
+              Foto: <a href="https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg" target="_blank">EvelinaRibarova</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+            </span>
+          </span>
+        </div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <h4>Basilika San Domenico</h4>
+        <div class="img-block" style="float:left; margin:0 2em 1em 0; max-width:200px; text-align:center;">
+          <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+            <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank" tabindex="-1">
+              <img src="../data/pictures/bologna/BO_2_Basilica_S_Domenico.jpg" 
+                   alt="Basilika San Domenico" 
+                   title="Basilika San Domenico&#10;Foto: Elemari-r95, CC BY-SA 4.0, via Wikimedia Commons">
+            </a>
+            <span class="img-caption" style="font-size:0.95em; display:block; margin-top:0.3em;">Basilica di San Domenico</span>
+            <span class="img-credit-tooltip" style="display:none; position:absolute; left:50%; transform:translateX(-50%); bottom:110%; background:#fff; color:#333; border:1px solid #ccc; border-radius:6px; padding:0.5em 1em; font-size:0.85em; z-index:10; white-space:nowrap; box-shadow:0 2px 8px #bbb;">
+              Foto: <a href="https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg" target="_blank">Elemari-r95</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons
+            </span>
+          </span>
+        </div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <h4>Ehemaliges Kloster der Frati Gaudenti</h4>
+        <div class="quote">"Frati godenti fummo, e bolognesi;"</div>
+        <span class="trad-mancante">TRADUZIONE MANCANTE</span>
+        <hr>
+      </div>
+      <div class="map-col">
+        <span style="color:#b22222; font-weight:bold;">[Interaktive Karte hier]</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Show/hide image credits on hover
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+        var tooltip = wrapper.querySelector('.img-credit-tooltip');
+        if (!tooltip) return;
+        wrapper.addEventListener('mouseenter', function() {
+          tooltip.style.display = 'block';
+        });
+        wrapper.addEventListener('mouseleave', function() {
+          tooltip.style.display = 'none';
+        });
+      });
+    });
+    // Language switcher logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const langBtn = document.getElementById('lang-btn');
+      const langMenu = document.getElementById('lang-menu');
+      function showLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(sec => sec.style.display = 'none');
+        const sel = document.querySelector('.lang-' + lang);
+        if (sel) sel.style.display = '';
+        // Use a mapping for display text
+        const langMap = { it: 'ITA', en: 'EN', de: 'DE' };
+        langBtn.textContent = langMap[lang] || lang.toUpperCase();
+      }
+      langMenu.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', function() {
+          showLang(this.dataset.lang);
+          langMenu.style.display = 'none';
+          langBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+      // Toggle dropdown on button click
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = langMenu.style.display === 'block';
+        langMenu.style.display = isOpen ? 'none' : 'block';
+        langBtn.setAttribute('aria-expanded', !isOpen);
+      });
+      // Hide dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!langMenu.contains(e.target) && e.target !== langBtn) {
+          langMenu.style.display = 'none';
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Default to Italian
+      showLang('it');
+    });
+  </script>
+  <script src="../../js/lang-switch.js"></script>
+</script>
+<script>
+// Tooltip logic for image credits
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+    const tooltip = wrapper.querySelector('.img-credit-tooltip');
+    if (!tooltip) return;
+    wrapper.addEventListener('mouseenter', function() {
+      tooltip.style.display = 'block';
+    });
+    wrapper.addEventListener('mouseleave', function() {
+      tooltip.style.display = 'none';
+    });
+    // For accessibility: show on focus, hide on blur
+    wrapper.addEventListener('focusin', function() {
+      tooltip.style.display = 'block';
+    });
+    wrapper.addEventListener('focusout', function() {
+      tooltip.style.display = 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

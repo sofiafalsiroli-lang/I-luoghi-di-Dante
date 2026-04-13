@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ravenna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ravenna – In Dante's Footsteps">
+  <link rel="icon" type="image/svg+xml" href="../../data/pictures/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .page-layout { display: flex; gap: 2em; margin-top: 2em; align-items: flex-start; margin-left: auto; margin-right: auto; max-width: 2200px; }
+    .intro-map-row { display: flex; gap: 2em; align-items: flex-start; }
+    .intro-col { flex: 2; min-width: 0; }
+    .map-col { flex: 1; min-width: 320px; max-width: 420px; background: #ffc0cb; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+    .text-col { flex: 1 1 100%; min-width: 0; }
+    .quote { font-style: italic; margin: 1em 0; }
+    .trad-mancante { color: #b22222; font-weight: bold; }
+    .img-block { margin: 1em 0; text-align: center; }
+    .section-flex-row { display: flex; gap: 2em; align-items: flex-start; }
+    .section-flex-row .section-text { flex: 3; min-width: 0; }
+    .section-flex-row .section-img { flex: 1; min-width: 0; display: flex; justify-content: center; }
+    @media (max-width: 900px) {
+      .section-flex-row { flex-direction: column; }
+    }
+    .img-block img { max-width: 640px; border-radius: 8px; }
+    .section-highlight {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+      margin-bottom: 2.5em;
+    }
+    .section-highlight .section-flex-row .section-text > p {
+      border-left: none;
+      padding-left: 0;
+    }
+    .decorated-paragraph {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .section-text > p {
+      border-left: 5px solid #b22222;
+      padding-left: 1.2em;
+      margin-left: 0;
+    }
+    .img-caption { font-size: 0.8em; color: #555; margin-top: 0.3em; }
+    .img-tooltip-wrapper { position: relative; display: inline-block; }
+    .img-credit-tooltip { display: none; position: absolute; left: 50%; transform: translateX(-50%); bottom: 110%; background: #fff; color: #333; border: 1px solid #ccc; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; z-index: 10; white-space: nowrap; box-shadow: 0 2px 8px #bbb; }
+    .lang-section { margin-bottom: 2em; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+    .lang-section h3 { margin-top: 0; }
+    .main-head {
+      background: #b22222;
+      color: #fff;
+    }
+    .main-head h1 {
+      color: #fff;
+    }
+    h1, h2, h3, h4 { color: #b22222; }
+    @media (max-width: 900px) {
+      .page-layout, .intro-map-row { flex-direction: column; }
+      .map-col { min-height: 100px; max-width: 100%; margin-top: 1em; }
+      .img-block img { max-width: 95vw; max-width: 640px; }
+      .text-col { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Language bar: dark red, language button in upper right -->
+  <div class="lang-bar">
+    <div class="lang-switch" aria-label="Language selector">
+      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">EN</button>
+      <div id="lang-menu" class="lang-menu" role="menu" aria-label="Available languages">
+        <button role="menuitem" data-lang="it" onclick="window.location.href='../it/ravenna_it.html'">ITA</button>
+        <button role="menuitem" data-lang="en" aria-current="page">EN</button>
+        <button role="menuitem" data-lang="de" onclick="window.location.href='../German_pages/ravenna_de.html'">DE</button>
+      </div>
+    </div>
+  </div>
+  <!-- Main head: always visible at the top of every page -->
+  <div class="main-head">
+    <h1>On Dante's Trail</h1>
+  </div>
+  <header>
+    <nav class="navbar" aria-label="Main menu">
+      <ul class="menu four-cols">
+        <li><a href="index_en.html">HOME</a></li>
+        <li class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">DANTE'S PLACES <span class="dropdown-arrow">&#9660;</span></a>
+          <ul class="dropdown-content">
+            <li><a href="bologna_en.html">Bologna</a></li>
+            <li><a href="casentino_en.html">Casentino</a></li>
+            <li><a href="forli_en.html">Forlì</a></li>
+            <li><a href="lunigiana_en.html">Lunigiana</a></li>
+            <li><a href="ravenna_en.html" aria-current="page" class="active">Ravenna</a></li>
+            <li><a href="treviso_en.html">Treviso</a></li>
+            <li><a href="verona_en.html">Verona</a></li>
+          </ul>
+        </li>
+        <li><a href="map_placeholder_en.html">MAP</a></li>
+        <li><a href="about_en.html">ABOUT THE WEBSITE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="lang-section lang-en">
+    <h2 class="city-head">Ravenna</h2>
+    <div class="page-layout">
+      <div class="text-col">
+        <!-- Introduction and Dante's Places (section 1) -->
+        <div class="section-highlight">
+          <h3>Introduction</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>Ravenna was the last city where Dante Alighieri lived: he arrived here in 1318 at the invitation of Francesco da Polenta, known as Francesco “il Vecchio” (“the Elder”), who welcomed him into his residence and protected him until his death in 1321. Ravenna became a true home for the poet, where he was able to work with relative peace during the final years of his life.<br>Dante’s presence is historically documented: he received a stipend from the city government and continued his literary and political projects until his death. Ravenna still preserves numerous references to his memory today, both in institutional sites and in urban art and culture.</p>
+              <h4>Places dedicated to Dante</h4>
+              <ul>
+                <li>Dante Museum</li>
+                <li>Tomb of Dante</li>
+                <li>Dante House</li>
+                <li>Quadrarco of Braccioforte</li>
+                <li>Kobra’s Dante murals</li>
+              </ul>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="map-col">
+                <span style="color:#b22222; font-weight:bold;">[Interactive map here]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 1: Dante Museum -->
+        <div class="section-highlight">
+          <h3>Dante Museum</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>The Dante Museum in Ravenna, located on the first floor of the ancient Franciscan convent next to the Poet’s Tomb, is one of the main sites dedicated to the memory and works of Dante Alighieri. Founded in 1921 on the occasion of the sixth centenary of his death and extensively renovated in recent times, the museum now offers a modern and immersive exhibition path divided into several rooms, guiding visitors through the life, works, and legacy of the poet over time.<br><br>The exhibition, organized into eight thematic rooms, combines historical artifacts, symbolic objects, and multimedia installations to tell the human and artistic experience of Dante, with particular focus on the <em>Divina Commedia</em>. Among the most significant items preserved are the wooden box that once held the poet’s bones for centuries and the urn used for their display in 1865, both of which testify to the complex history surrounding his remains.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:DanteMuseum02.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_1_Museo_Dante.jpg" alt="Bust of Dante at the Dante Museum in Ravenna">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Bust of Dante at the Dante Museum in Ravenna</span>
+                  <span class="img-credit-tooltip">
+                    Bust of Dante at the Dante Museum in Ravenna<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:DanteMuseum02.jpg" target="_blank">Georges Jansoone</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 2: Tomb of Dante -->
+        <div class="section-highlight">
+          <h3>Tomb of Dante</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>The Tomb of Dante in Ravenna, located next to the Basilica of San Francesco in the heart of the so-called “zone of silence,” is the place where the Supreme Poet has rested since 1321, the year of his death in exile. Originally, the burial site was a simple chapel commissioned by Guido Novello da Polenta, lord of the city, but over time the monument underwent several transformations: in 1483 it was enriched with a bas-relief by Pietro Lombardo, while between 1780 and 1782 the current neoclassical mausoleum was built based on a design by Camillo Morigia. Inside, the urn containing Dante’s remains is preserved along with the Latin epitaph, composed by Bernardo Canaccio, which celebrates the greatness of the poet and his exile:</p>
+              <div class="quote"><em>Iura monarchiae, superos, Phlegetonta lacusque<br>lustrando cecini, voluerunt fata quousque;<br>sed quia pars cessit melioribus hospita castris,<br>actoremque suum petiit felicior astris,<br>hic claudor Dantes, patriis extorris ab oris<br>quem genuit parvi Florentia mater amoris</em></div>
+              <p>“I sang of the rights of monarchy, of heaven, and of the rivers of Phlegethon<br>as I journeyed until fate allowed.<br>But since my better part went to a more blessed abode,<br>and more happily reached its Creator among the stars, here I am enclosed,<br>(I) Dante, exiled from my native land,<br>whom Florence, mother of little love, gave birth to.”</p>
+              <p>The history of the tomb is marked by complex events, especially due to disputes between Ravenna and Florence: to protect the poet’s bones, the Franciscan friars repeatedly hid them, causing them to disappear for long periods until their rediscovery in the 19th century and their final placement in the mausoleum.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Ravenna,_tomba_di_Dante_(05).jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_2_Tomba_Dante.jpg" alt="Dante's Tomb">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Dante's Tomb</span>
+                  <span class="img-credit-tooltip">
+                    Dante's Tomb<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Ravenna,_tomba_di_Dante_(05).jpg" target="_blank">Gianni Careddu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 3: Quadrarco of Braccioforte -->
+        <div class="section-highlight">
+          <h3>Quadrarco of Braccioforte Garden</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>The Quadrarco of Braccioforte, located near Dante’s Tomb, is one of the most significant places of Dantean memory in Ravenna. After the poet’s death in 1321, his remains were initially placed in a simple sarcophagus in the Church of San Francesco, by order of Guido Novello da Polenta. In 1483, the tomb was renovated at the initiative of the Venetian governor Bernardo Bembo, but between the 16th and 18th centuries the story of the bones became complex: to prevent Florence from claiming them, the Franciscan friars hid them several times, causing them to disappear for about two centuries.<br><br>In 1677 they were also walled inside the Quadrarco, as attested by the inscription carved on the box: “Dantis ossa a me Fra Antonio Santi hic posita anno 1677 die 18 octobris” (“The bones of Dante placed here by me, Friar Antonio Santi, on October 18, 1677”). After the construction of the new neoclassical mausoleum between 1780 and 1782, the remains briefly returned to their place, but in 1810, with the Napoleonic suppression of religious orders, the friars hid them again in a wall of the Quadrarco.<br><br>On May 25, 1865, during maintenance work, a mason accidentally discovered the box; thanks to the intervention of the student Anastasio Matteucci, it was saved and identified. The bones were reassembled, displayed for some months in a crystal urn, and finally placed permanently in the mausoleum. During World War II, for further safety, the remains were temporarily moved and buried in a mound in the nearby garden between 1944 and 1945: a plaque still today recalls the event and testifies to their safekeeping during those difficult years.<br><br>The Quadrarco of Braccioforte thus preserves a central role in the history of Dante’s remains, witnessing centuries of custody, concealment, and rediscovery that have made it a symbolic place of the poet’s memory.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Ravenna_-_Tomba_di_Dante_-_La_targa_nel_quadrarco_di_Braccioforte.JPG" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_3_Quadraco_Braccioforte.jfif" alt="Plaque commemorating the temporary relocation of Dante's remains during World War II">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Plaque commemorating the temporary relocation of Dante's remains during World War II</span>
+                  <span class="img-credit-tooltip">
+                    Plaque commemorating the temporary relocation of Dante's remains during World War II<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Ravenna_-_Tomba_di_Dante_-_La_targa_nel_quadrarco_di_Braccioforte.JPG" target="_blank">Monica Rondoni</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Place 4: Dante mural by Kobra -->
+        <div class="section-highlight">
+          <h3>Dante mural by the artist Kobra</h3>
+          <div class="section-flex-row">
+            <div class="section-text" style="flex:2;">
+              <p>In Ravenna, the Brazilian artist Kobra created an impressive mural dedicated to the Supreme Poet. The work, characterized by vibrant colors and Kobra’s typical geometric style, depicts Dante with his iconic stern face and laurel crown, surrounded by details referencing the <em>Divina Commedia</em> and Italian culture. The mural is not only an artistic tribute but also an invitation to reflect on the bond between the city and the poet, recalling Dante’s stay in Ravenna during the final years of his life and his timeless cultural influence.</p>
+            </div>
+            <div class="section-img" style="flex:1;">
+              <div class="img-block">
+                <span class="img-tooltip-wrapper" style="position:relative;display:inline-block;">
+                  <a href="https://commons.wikimedia.org/wiki/File:Dante_Alighieri_2.jpg" target="_blank" tabindex="-1">
+                    <img src="../../data/pictures/ravenna/RA_4_Murales_Dante.jpg" alt="Dante mural by Kobra">
+                  </a>
+                  <span class="img-caption" style="display:block; margin-top:0.3em;">Dante mural by Kobra</span>
+                  <span class="img-credit-tooltip">
+                    Dante mural by Kobra<br>Photo: <a href="https://commons.wikimedia.org/wiki/File:Dante_Alighieri_2.jpg" target="_blank">Renzo favalli</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sources (section 5) -->
+        <div class="section-highlight">
+          <h4>Sources for the text</h4>
+          <ul>
+            <li><a href="https://www.turismo.ra.it/cultura-e-storia/luoghi-della-memoria/tomba-dante-alighieri" target="_blank">turismo.ra.it</a></li>
+            <li><a href="https://it.wikipedia.org/wiki/Tomba_di_Dante" target="_blank">Wikipedia: Tomba di Dante</a></li>
+            <li><a href="https://www.visitravenna.it/it/arte-e-cultura/murales-dante-kobra" target="_blank">visitravenna.it: Murales Dante Kobra</a></li>
+            <li><a href="https://www.artribune.com/arte-contemporanea/2023/03/kobra-dante-ravenna/" target="_blank">artribune.com: Kobra Dante Ravenna</a></li>
+            <li><a href="https://www.ravennatoday.it/arte/kobra-dante-ravenna.html" target="_blank">ravennatoday.it: Kobra Dante Ravenna</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/lang-switch.js"></script>
+  <script>
+  // Tooltip logic for image credits
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.img-tooltip-wrapper').forEach(function(wrapper) {
+      const tooltip = wrapper.querySelector('.img-credit-tooltip');
+      if (!tooltip) return;
+      wrapper.addEventListener('mouseenter', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('mouseleave', function() {
+        tooltip.style.display = 'none';
+      });
+      // For accessibility: show on focus, hide on blur
+      wrapper.addEventListener('focusin', function() {
+        tooltip.style.display = 'block';
+      });
+      wrapper.addEventListener('focusout', function() {
+        tooltip.style.display = 'none';
+      });
+    });
+  });
+  </script>
+</body>
+</html>
