@@ -287,9 +287,11 @@ nav.navbar {
 
 .lang-bar .lang-switch {
   margin: 0 2.5rem 0 0;
-  position: static;
+  position: relative;
   top: auto;
   right: auto;
+  display: flex;
+  align-items: center;
 }
 
 /* Four equal menu columns */
