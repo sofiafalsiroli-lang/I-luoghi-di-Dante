@@ -27,9 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
   langMenu.querySelectorAll('button[data-lang]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       const lang = btn.getAttribute('data-lang');
-      // Implement your language switching logic here
-      // For now, just alert the user
-      alert('Language switch to: ' + lang + ' (implement navigation logic)');
+      // Switch language by replacing the language folder and page suffix in the current URL
+      // e.g. /it/bologna_it.html -> /de/bologna_de.html
+      const path = window.location.pathname;
+      const newPath = path.replace(
+        /\/(it|en|de)\/([^/]+)_(it|en|de)(\.html)$/,
+        '/' + lang + '/$2_' + lang + '$4'
+      );
+      if (newPath !== path) {
+        window.location.href = newPath;
+      }
       langMenu.style.display = 'none';
       langBtn.setAttribute('aria-expanded', 'false');
     });
