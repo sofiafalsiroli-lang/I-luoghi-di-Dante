@@ -28,7 +28,7 @@ body {
   padding: 0;
   background: #f8f6f3;
   color: #222;
-  font-size: 22px;
+  font-size: 16px;
   padding-top: calc(1.47em + 4.13rem + 3.13em);
 }
 
@@ -287,9 +287,11 @@ nav.navbar {
 
 .lang-bar .lang-switch {
   margin: 0 2.5rem 0 0;
-  position: static;
+  position: relative;
   top: auto;
   right: auto;
+  display: flex;
+  align-items: center;
 }
 
 /* Four equal menu columns */
