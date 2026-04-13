@@ -42,5 +42,10 @@
 - creation of READ.ME document
 - fixing of eventual issues
 
+  ## 13 April 2026:
+  - uploading on Github
+  - fixing of displaying issues (missing elements, missing references, font size...)
+  - creation of the tutorials
+
 
 
