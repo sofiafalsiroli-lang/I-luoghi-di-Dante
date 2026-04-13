@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
   langMenu.querySelectorAll('button[data-lang]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       const lang = btn.getAttribute('data-lang');
+      // Validate lang against expected values to prevent open-redirect injection
+      if (!['it', 'en', 'de'].includes(lang)) return;
       // Switch language by replacing the language folder and page suffix in the current URL
       // e.g. /it/bologna_it.html -> /de/bologna_de.html
       const path = window.location.pathname;
