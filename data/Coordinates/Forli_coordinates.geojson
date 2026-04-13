@@ -1,0 +1,50 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Porta Schiavonia",
+                "ID": "FO_1"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.0287,
+                    44.2263
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Palazzo Paulucci di Calboli d’Aste",
+                "ID": "FO_2"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.0424,
+                    44.223
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Piazza Saffi",
+                "ID": "FO_3"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.041,
+                    44.2225
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        }
+    ]
+}

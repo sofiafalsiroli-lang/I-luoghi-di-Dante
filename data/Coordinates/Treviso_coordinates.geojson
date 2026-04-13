@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ponte Dante",
+                "ID": "TR_1"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2508,
+                    45.6643
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chiesa di San Francesco",
+                "ID": "TR_2"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2474,
+                    45.6683
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        }
+    ]
+}

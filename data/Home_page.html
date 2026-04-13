@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Sulle tracce di Dante</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+  <!DOCTYPE html>
+  <html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sulle tracce di Dante</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      .main-navbar {
+        width: 100%;
+        background: #b22222;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0 0 8px 8px;
+      }
+      .main-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language bar: dark red, language button in upper right -->
+    <div class="lang-bar">
+      <div class="lang-switch" aria-label="Selettore lingua">
+        <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Cambia lingua">ITA</button>
+        <div id="lang-menu" class="lang-menu" role="menu" aria-label="Lingue disponibili">
+          <button role="menuitem" data-lang="it">ITA</button>
+          <button role="menuitem" data-lang="en">EN</button>
+          <button role="menuitem" data-lang="de">DE</button>
+        </div>
+      </div>
+    </div>
+    <!-- Main head: always visible at the top of every page -->
+    <div class="main-head">
+      <h1>Sulle tracce di Dante</h1>
+    </div>
+    <header>
+      <nav class="navbar" aria-label="Menu principale">
+        <ul class="menu four-cols">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">I LUOGHI DI DANTE <span class="dropdown-arrow">&#9660;</span></a>
+            <ul class="dropdown-content">
+              <li><a href="it/bologna_it.html">Bologna</a></li>
+              <li><a href="it/casentino_it.html">Casentino</a></li>
+              <li><a href="it/forli_it.html">Forlì</a></li>
+              <li><a href="it/lunigiana_it.html">Lunigiana</a></li>
+              <li><a href="it/ravenna_it.html">Ravenna</a></li>
+              <li><a href="it/treviso_it.html">Treviso</a></li>
+              <li><a href="it/verona_it.html">Verona</a></li>
+            </ul>
+          </li>
+          <li><a href="../map_placeholder.html">MAPPA</a></li>
+          <li><a href="it/about_it.html">ABOUT THE WEBSITE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script src="../../js/lang-switch.js"></script>
+  </body>
+  </html>

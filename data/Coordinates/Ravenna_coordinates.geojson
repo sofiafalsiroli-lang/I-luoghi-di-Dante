@@ -1,0 +1,65 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Museo Dante",
+                "ID": "RA_1"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2008,
+                    44.4165
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Tomba di Dante",
+                "ID": "RA_2"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2009,
+                    44.4161
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Quadrarco di Braccioforte",
+                "ID": "RA_3"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2007,
+                    44.4161
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Murales di Dante ",
+                "ID": "RA_4"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.1971,
+                    44.4183
+                ],
+                "type": "Point"
+            },
+            "id": 3
+        }
+    ]
+}

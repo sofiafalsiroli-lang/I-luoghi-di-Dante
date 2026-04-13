@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Castello di Poppi",
+                "ID": "CA_1"
+            },
+            "geometry": {
+                "coordinates": [
+                    11.7677,
+                    43.7231
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Castello di Romena",
+                "ID": "CA_2"
+            },
+            "geometry": {
+                "coordinates": [
+                    11.71418702130947,
+                    43.78005271006205
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        }
+    ]
+}

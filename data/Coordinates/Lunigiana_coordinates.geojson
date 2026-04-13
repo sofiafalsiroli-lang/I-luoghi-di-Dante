@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Museo Dantesco Lunigianese",
+                "ID": "LU_1"
+            },
+            "geometry": {
+                "coordinates": [
+                    9.8897,
+                    44.3158
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Castello di Giovagallo",
+                "ID": "LU_2"
+            },
+            "geometry": {
+                "coordinates": [
+                    9.8813,
+                    44.2277
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        }
+    ]
+}

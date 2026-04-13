@@ -1,0 +1,103 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Bologna",
+                "category": "city"
+            },
+            "geometry": {
+                "coordinates": [
+                    11.34443,
+                    44.49608
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Casentino",
+                "category": "region"
+            },
+            "geometry": {
+                "coordinates": [
+                    13.50972,
+                    42.27908
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Forlì",
+                "category": "city"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.04029,
+                    44.22348
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lunigiana",
+                "category": "historical region"
+            },
+            "geometry": {
+                "coordinates": [
+                    9.89126,
+                    44.31664
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ravenna",
+                "category": "city"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.19716,
+                    44.42139
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Treviso",
+                "category": "city"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.2465,
+                    45.66615
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Verona",
+                "category": "city"
+            },
+            "geometry": {
+                "coordinates": [
+                    10.99769,
+                    45.44457
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
