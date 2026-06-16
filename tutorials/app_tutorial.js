@@ -422,8 +422,8 @@ function renderShellText() {
 
   const cityMenu = document.getElementById("cities-menu");
   const cityToggle = document.getElementById("nav-cities");
-  cityMenu.setAttribute("aria-label", t.cities);
   cityToggle.setAttribute("aria-expanded", "false");
+  cityMenu.hidden = true;
   cityMenu.innerHTML = "";
   CITIES.forEach((city) => {
     const btn = document.createElement("button");
@@ -432,7 +432,7 @@ function renderShellText() {
     btn.addEventListener("click", () => {
       state.page = "city";
       state.city = city.slug;
-      cityMenu.classList.remove("open");
+      cityMenu.hidden = true;
       cityToggle.setAttribute("aria-expanded", "false");
       updateRoute();
       renderPage();
@@ -640,24 +640,25 @@ function bindEvents() {
     renderPage();
   });
 
-  const cityToggle = document.querySelector(".dropdown-toggle");
+  const cityToggle = document.getElementById("nav-cities");
   const cityMenu = document.getElementById("cities-menu");
 
   cityToggle.addEventListener("click", () => {
-    const isOpen = cityMenu.classList.toggle("open");
+    const isOpen = cityMenu.hidden;
+    cityMenu.hidden = !isOpen;
     cityToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".dropdown")) {
-      cityMenu.classList.remove("open");
+      cityMenu.hidden = true;
       cityToggle.setAttribute("aria-expanded", "false");
     }
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      cityMenu.classList.remove("open");
+      cityMenu.hidden = true;
       cityToggle.setAttribute("aria-expanded", "false");
       cityToggle.focus();
     }
