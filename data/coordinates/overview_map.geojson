@@ -1,0 +1,131 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Bologna",
+                "name_en": "Bologna",
+                "name_de": "Bologna",
+                "anchor": "bologna",
+                "citySlug": "bologna",
+                "link": "?page=city&city=bologna#bologna"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.34443,
+                    44.49608
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Casentino",
+                "name_en": "Casentino",
+                "name_de": "Casentino",
+                "anchor": "casentino",
+                "citySlug": "casentino",
+                "link": "?page=city&city=casentino#casentino"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.76771,
+                    43.72337
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Forlì",
+                "name_en": "Forlì",
+                "name_de": "Forlì",
+                "anchor": "forli",
+                "citySlug": "forli",
+                "link": "?page=city&city=forli#forli"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.04029,
+                    44.22348
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Lunigiana",
+                "name_en": "Lunigiana",
+                "name_de": "Lunigiana",
+                "anchor": "lunigiana",
+                "citySlug": "lunigiana",
+                "link": "?page=city&city=lunigiana#lunigiana"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.89126,
+                    44.31664
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Ravenna",
+                "name_en": "Ravenna",
+                "name_de": "Ravenna",
+                "anchor": "ravenna",
+                "citySlug": "ravenna",
+                "link": "?page=city&city=ravenna#ravenna"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.19716,
+                    44.42139
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Treviso",
+                "name_en": "Treviso",
+                "name_de": "Treviso",
+                "anchor": "treviso",
+                "citySlug": "treviso",
+                "link": "?page=city&city=treviso#treviso"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2465,
+                    45.66615
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Verona",
+                "name_en": "Verona",
+                "name_de": "Verona",
+                "anchor": "verona",
+                "citySlug": "verona",
+                "link": "?page=city&city=verona#verona"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.99769,
+                    45.44457
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Museo Dante",
+                "name_en": "Dante's Museum",
+                "name_de": "Dantes Museum",
+                "anchor": "ra-1-museo-dante",
+                "citySlug": "ravenna",
+                "link": "?page=city&city=ravenna#dantes-museum"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2008,
+                    44.4165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Tomba di Dante",
+                "name_en": "Tomb of Dante ",
+                "name_de": "Dantes Grab",
+                "anchor": "ra-2-tomba-dante",
+                "citySlug": "ravenna",
+                "link": "?page=city&city=ravenna#tomb-of-dante"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2009,
+                    44.4161
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Quadrarco di Braccioforte",
+                "name_en": "Quadrarco of Braccioforte Garden",
+                "name_de": "Garten des Quadrarco di Braccioforte",
+                "anchor": "ra-3-quadrarco",
+                "citySlug": "ravenna",
+                "link": "?page=city&city=ravenna#quadrarco-of-braccioforte-garden"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2007,
+                    44.4161
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Murales di Dante di Kobra",
+                "name_en": "Kobra's Dante murals",
+                "name_de": "Dante-Mural von Kobra",
+                "anchor": "ra-4-murales",
+                "citySlug": "ravenna",
+                "link": "?page=city&city=ravenna#kobras-dante-murals"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.1971,
+                    44.4183
+                ]
+            }
+        }
+    ]
+}

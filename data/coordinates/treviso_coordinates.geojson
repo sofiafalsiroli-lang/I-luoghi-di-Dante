@@ -1,0 +1,41 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Ponte Dante",
+                "name_en": "Dante Bridge",
+                "name_de": "Dante-Brücke",
+                "anchor": "tr-1-ponte-dante",
+                "citySlug": "treviso",
+                "link": "?page=city&city=treviso#tr-1-ponte-dante"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2508,
+                    45.6643
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Chiesa di San Francesco",
+                "name_en": "Church of San Francesco",
+                "name_de": "Kirche San Francesco",
+                "anchor": "tr-2-chiesa-san-francesco",
+                "citySlug": "treviso",
+                "link": "?page=city&city=treviso#tr-2-chiesa-san-francesco"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.2474,
+                    45.6683
+                ]
+            }
+        }
+    ]
+}

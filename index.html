@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive educational website about Dante's exile trail across Northern Italy, with city pages, maps, and multilingual content.">
+  <title>On Dante's Trail</title>
+  <link rel="icon" type="image/svg+xml" href="data/pictures/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <div class="page-background" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="language-bar" aria-label="Language selection" role="toolbar">
+      <button class="lang-btn" data-lang="it" type="button">Italiano</button>
+      <button class="lang-btn" data-lang="en" type="button">English</button>
+      <button class="lang-btn" data-lang="de" type="button">Deutsch</button>
+    </div>
+
+    <div class="title-bar">
+      <h1 id="site-title">On Dante's Trail</h1>
+      <p id="site-subtitle">A journey through Northern Italy</p>
+    </div>
+
+    <nav class="menu-bar" aria-label="Main menu">
+      <a id="nav-home" href="#" data-page="home">Home</a>
+
+      <div class="dropdown">
+        <button id="nav-cities" class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="cities-menu">Cities</button>
+        <div id="cities-menu" class="dropdown-menu" aria-label="Cities"></div>
+      </div>
+
+      <a id="nav-map" href="#" data-page="map">Map</a>
+      <a id="nav-about" href="#" data-page="about">About</a>
+    </nav>
+  </header>
+
+  <main class="content-shell">
+    <div class="content-card">
+      <div id="content" class="content" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cell footer-brand">
+        <div class="footer-site">On Dante's Trail</div>
+        <div class="footer-copy">© 2026 On Dante's Trail</div>
+      </div>
+      <div class="footer-cell footer-link">
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div class="footer-cell footer-link">
+        <a href="?page=about">About</a>
+      </div>
+      <div class="footer-cell footer-link">
+        <a href="mailto:sofia.falsiroli@edu.uni-graz.at">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="interactive-map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

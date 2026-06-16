@@ -1,0 +1,202 @@
+{
+  "Bologna_1.jpg": {
+    "place": "Torre della Garisenda",
+    "city": "Bologna",
+    "description": {
+      "it": "Torre della Garisenda",
+      "en": "Garisenda Tower",
+      "de": "Turm Garisenda"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:BO_-_Torre_Garisenda.jpg\">EvelinaRibarova</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Bologna_2.jpg": {
+    "place": "Basilica di San Domenico",
+    "city": "Bologna",
+    "description": {
+      "it": "Basilica di San Domenico",
+      "en": "Basilica of San Domenico",
+      "de": "Basilika San Domenico"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Basilica_of_St._Domenico_Bologna.jpg\">Elemari-r95</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Bologna_3.jpg": {
+    "place": "Lapide di Via Arienti",
+    "city": "Bologna",
+    "description": {
+      "it": "Lapide che ricorda la presenza dell'ex convento dei Frati Gaudenti e il loro collegamento con la Commedia.",
+      "en": "Plaque commemorating the former convent of the Frati Gaudenti and their connection to the Divine Comedy.",
+      "de": "Gedenktafel, die an das ehemalige Kloster der Frati Gaudenti und ihre Verbindung zur Göttlichen Komödie erinnert."
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Via_arienti_40_.jpg\">Elena Selmo</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Casentino_1.jpg": {
+    "place": "Castello di Poppi",
+    "city": "Casentino",
+    "description": {
+      "it": "Castello di Poppi",
+      "en": "Poppi Castle",
+      "de": "Burg Poppi"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Poppi_-_Castello_dei_Conti_Guidi_-_2025-09-01_14-07-37_001.jpg\">Fabioarg</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Casentino_2.jpg": {
+    "place": "Castello di Romena",
+    "city": "Casentino",
+    "description": {
+      "it": "Castello di Romena",
+      "en": "Romena Castle",
+      "de": "Burg Romena"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Castello_di_romena,_mastio_04.JPG\">Sailko</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Forli_1.jfif": {
+    "place": "Porta Schiavonia",
+    "city": "ForlÃ¬",
+    "description": {
+      "it": "Porta Schiavonia",
+      "en": "Schiavonia Gate",
+      "de": "Tor Schiavonia"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Porta_Schiavonia_(Forl%C3%AC).JPG\">Perkele at Italian Wikipedia</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  "Forli_2.jpg": {
+    "place": "Palazzo Paulucci di Calboli d'Aste",
+    "city": "ForlÃ¬",
+    "description": {
+      "it": "Palazzo Paulucci di Calboli d'Aste",
+      "en": "Paulucci di Calboli d'Aste Palace",
+      "de": "Palast Paulucci di Calboli d'Aste"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Palazzo_Paolucci_Sede_della_Prefettura_2010_-_panoramio.jpg\">piero drago</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  "Forli_3.jpg": {
+    "place": "Piazza Saffi",
+    "city": "ForlÃ¬",
+    "description": {
+      "it": "Piazza Saffi",
+      "en": "Saffi Square",
+      "de": "Saffi Platz"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Forl%C3%AC_Piazza_Aurelio_Saffi_10.jpg\">Zairon</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Lunigiana_1.jpg": {
+    "place": "Museo Dantesco Lunigianese",
+    "city": "Lunigiana",
+    "description": {
+      "it": "Vista di Mulazzo",
+      "en": "View of Mulazzo",
+      "de": "Blick auf Mulazzo"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Mulazzo_(Massa-Carrara)_2.jpg\">Salvatore Lombardi</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  "Lunigiana_2.png": {
+    "place": "Castello di Giovagallo",
+    "city": "Lunigiana",
+    "description": {
+      "it": "Stemma del Casato dei Malaspina dello Spino Secco",
+      "en": "Coat of arms of the House of Malaspina (Spino Secco)",
+      "de": "Wappen des Hauses Malaspina (Spino Secco)"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_House_of_Malaspina_(Spino_Secco)_(1).svg\">FootKalos1597</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Ravenna_1.jpg": {
+    "place": "Museo Dante",
+    "city": "Ravenna",
+    "description": {
+      "it": "Busto di Dante presso il Museo Dante di Ravenna",
+      "en": "Bust of Dante at the Dante Museum in Ravenna",
+      "de": "Büste von Dante im Dante-Museum in Ravenna"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:DanteMuseum02.jpg\">Georges Jansoone</a>, <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  "Ravenna_2.jpg": {
+    "place": "Tomba di Dante",
+    "city": "Ravenna",
+    "description": {
+      "it": "Tomba di Dante",
+      "en": "Dante's Tomb",
+      "de": "Dantes Grab"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Ravenna,_tomba_di_Dante_(05).jpg\">Gianni Careddu</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Ravenna_3.jfif": {
+    "place": "Quadrarco di Braccioforte",
+    "city": "Ravenna",
+    "description": {
+      "it": "Targa che ricorda il temporaneo ricollocamento delle spoglie di Dante durante la Seconda Guerra Mondiale",
+      "en": "Plaque commemorating the temporary relocation of Dante's remains during World War II",
+      "de": "Tafel zur Erinnerung an die vorübergehende Verlegung von Dantes Überresten im Zweiten Weltkrieg"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Ravenna_-_Tomba_di_Dante_-_La_targa_nel_quadrarco_di_Braccioforte.JPG\">Monica Rondoni</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Ravenna_4.jpg": {
+    "place": "Murales di Dante di Kobra",
+    "city": "Ravenna",
+    "description": {
+      "it": "Murales di Dante di Kobra",
+      "en": "Dante mural by Kobra",
+      "de": "Dante-Mural von Kobra"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Dante_Alighieri_2.jpg\">Renzo favalli</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Treviso_1.jpg": {
+    "place": "Ponte Dante",
+    "city": "Treviso",
+    "description": {
+      "it": "Ponte Dante",
+      "en": "Dante Bridge",
+      "de": "Dante-Brücke"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Treviso_-_Ponte_Dante_-_2023-09-08_15-10-37_001.jpg\">Liridon</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Treviso_2.jpg": {
+    "place": "Chiesa di San Francesco",
+    "city": "Treviso",
+    "description": {
+      "it": "Chiesa di San Francesco",
+      "en": "Church of San Francesco",
+      "de": "Kirche San Francesco"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Chiesa_Convento_San_Francesco_Facciata_Treviso.jpg\">Didier Descouens</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Verona_1.jpg": {
+    "place": "Piazza Dante",
+    "city": "Verona",
+    "description": {
+      "it": "Piazza Dante",
+      "en": "Dante Square",
+      "de": "Danteplatz"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Piazza_dei_Signori_(Verona)_-_Casa_della_Piet%C3%A0.jpg\">Didier Descouens</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Verona_2.jfif": {
+    "place": "Chiesa di Sant'Elena",
+    "city": "Verona",
+    "description": {
+      "it": "Chiesa di Sant'Elena",
+      "en": "Church of Saint Helena",
+      "de": "Kirche St. Helena"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Duomo_(Verona)_-_Sant%27Elena_(Verona)_-_Facade.JPG\">Verona Cathedral</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  "Verona_3.jpg": {
+    "place": "Casa di Romeo",
+    "city": "Verona",
+    "description": {
+      "it": "Casa di Romeo",
+      "en": "Romeo's House",
+      "de": "Haus von Romeo"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Casa_di_Cagnolo_Nogarola_(Casa_di_Romeo),_Verona_(37779314011).jpg\">Dimitris Kamaras from Athens, Greece</a>, <a href=\"https://creativecommons.org/licenses/by/2.0\">CC BY 2.0</a>, via Wikimedia Commons"
+  },
+  "Verona_4.jpg": {
+    "place": "Porta Borsari",
+    "city": "Verona",
+    "description": {
+      "it": "Porta Borsari",
+      "en": "Porta Borsari",
+      "de": "Porta Borsari"
+    },
+    "credit": "<a href=\"https://commons.wikimedia.org/wiki/File:Porta_Borsari_(Verona).jpg\">Didier Descouens</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  }
+}

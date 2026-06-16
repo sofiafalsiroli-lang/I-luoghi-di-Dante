@@ -1,0 +1,41 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Museo Dantesco Lunigianese",
+                "name_en": "Dante's Museum in Lunigiana",
+                "name_de": "Dantes Museum der Lunigiana",
+                "anchor": "lu-1-museo-dantesco",
+                "citySlug": "lunigiana",
+                "link": "?page=city&city=lunigiana#lu-1-museo-dantesco"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.8897,
+                    44.3158
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Castello di Giovagallo",
+                "name_en": "Giovagallo Castle",
+                "name_de": "Giovagallo Burg",
+                "anchor": "lu-2-castello-giovagallo",
+                "citySlug": "lunigiana",
+                "link": "?page=city&city=lunigiana#lu-2-castello-giovagallo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.8813,
+                    44.2277
+                ]
+            }
+        }
+    ]
+}

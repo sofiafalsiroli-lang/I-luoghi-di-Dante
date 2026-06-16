@@ -1,0 +1,475 @@
+:root {
+  /*
+    Root CSS variables: centralize the colour palette, spacing and elevation
+    values so the theme can be tuned in one place for the whole site.
+  */
+  --bg-paper: #f5eee7;
+  --bg-gradient-start: #f2d8c9;
+  --bg-gradient-end: #e3c2b2;
+  --ink: #2a1b17;
+  --muted-ink: #4a3a33;
+  --deep-red: #b22222;
+  --deep-red-soft: #cb3a3a;
+  --gold-line: #c6a26a;
+  --card-bg: #fff9f5;
+  --shadow: 0 14px 40px rgba(74, 30, 30, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+  Base layout rules:
+  - `scroll-behavior: smooth` provides gentle scrolling when navigating to
+    anchors. Use sparingly on long pages to avoid motion issues for some users.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg-paper);
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height: 1.65;
+}
+
+.page-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  /* Decorative background layers: subtle radial highlights + gradient */
+  background:
+    radial-gradient(circle at 12% 12%, rgba(111, 20, 20, 0.18), transparent 45%),
+    radial-gradient(circle at 88% 18%, rgba(198, 162, 106, 0.3), transparent 35%),
+    linear-gradient(125deg, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: #f7ebe4;
+}
+
+/*
+  Header layout
+  - Uses a stacked structure: language bar, title bar, and menu bar.
+  - `position: sticky` keeps navigation accessible without losing flow.
+*/
+
+.language-bar,
+.title-bar,
+.menu-bar {
+  width: 100%;
+  margin: 0;
+}
+
+.language-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem 0.45rem;
+  background: #f7ebe4;
+  border-bottom: 1px solid rgba(111, 20, 20, 0.14);
+}
+
+.lang-btn {
+  border: 1px solid rgba(111, 20, 20, 0.45);
+  background: rgba(255, 249, 245, 0.92);
+  color: var(--deep-red);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn[aria-current="true"] {
+  background: var(--deep-red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.title-bar {
+  background: linear-gradient(90deg, #8f1a1a, var(--deep-red) 60%, var(--deep-red-soft));
+  color: #fffaf5;
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.title-bar h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "Cinzel", "Times New Roman", serif;
+  letter-spacing: 0.05em;
+  font-size: clamp(1.85rem, 3.4vw, 2.8rem);
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.title-bar p {
+  display: none;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 249, 245, 0.97);
+  border: 1px solid rgba(111, 20, 20, 0.28);
+  border-top: none;
+  margin-bottom: 0;
+}
+
+.menu-bar a,
+.dropdown-toggle {
+  color: var(--deep-red);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  font-size: 1.16rem;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+.menu-bar a:hover,
+.menu-bar a[aria-current="page"],
+.dropdown-toggle:hover {
+  background: rgba(111, 20, 20, 0.1);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  left: 0;
+  min-width: 195px;
+  background: #fffaf7;
+  border: 1px solid rgba(111, 20, 20, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(44, 20, 20, 0.18);
+  overflow: hidden;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  padding: 0.55rem 0.7rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.98rem;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(111, 20, 20, 0.08);
+}
+
+.content-shell {
+  width: 100%;
+  margin: 0;
+}
+
+.content-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  min-height: calc(100vh - 170px);
+}
+
+.content {
+  padding: clamp(1rem, 2.2vw, 1.8rem) clamp(1rem, 4vw, 3rem) 2rem;
+  font-size: clamp(1.16rem, 0.35vw + 1.06rem, 1.32rem);
+  line-height: 1.75;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/*
+  Content typography and headings
+  - Headings are styled to use the decorative `Cinzel` font for a historic look.
+  - `clamp()` is used to create responsive font sizing that scales smoothly.
+*/
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  color: var(--deep-red);
+  line-height: 1.35;
+  text-transform: none;
+}
+
+.content h1 {
+  margin-top: 0;
+  font-family: "Cinzel", "Times New Roman", serif;
+}
+
+.content h2 {
+  margin-top: 0;
+  font-family: "Cinzel", "Times New Roman", serif;
+}
+
+.content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.45rem;
+  border-left: 3px solid var(--gold-line);
+  padding-left: 0.55rem;
+}
+
+.content a {
+  color: var(--deep-red);
+  text-decoration: none;
+  font-weight: 700;
+}
+.content a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--deep-red);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+.footer-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ensure main content isn't hidden behind fixed footer */
+.content {
+  padding-bottom: 4rem;
+}
+
+.footer-center a,
+.footer-right a {
+  margin-left: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-center a:first-child { margin-left: 0; }
+.footer-right a { white-space: nowrap; }
+.footer-center a:hover,
+.footer-right a:hover {
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+@media (max-width: 760px) {
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-center { margin-top: 0.5rem; }
+}
+
+/* Ensure footer links appear white and not underlined in all states */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.content p {
+  margin-top: 0;
+  margin-bottom: 1.22em;
+}
+
+.content h3,
+.content h4,
+.content ul,
+.content ol,
+.content blockquote {
+  margin-top: 0.3em;
+  margin-bottom: 1.25em;
+}
+
+.placeholder-map {
+  margin: 0 0 1.35rem;
+  border: 1px solid rgba(111, 20, 20, 0.22);
+  border-radius: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.interactive-map {
+  margin: 0 0 1.25rem;
+}
+
+/* Map popup link styling to match site color */
+.leaflet-popup-content .map-popup-link,
+.map-popup-link {
+  color: var(--deep-red);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Links in Sources sections (city pages) should be black, not red */
+.content .sources-section a,
+.content .sources-section a:link,
+.content .sources-section a:visited,
+.content .sources-section a:hover,
+.content .sources-section a:focus {
+  color: #000 !important;
+  text-decoration: underline !important;
+  font-weight: 400 !important;
+}
+.map-popup-link:hover {
+  text-decoration: underline;
+}
+
+/* Make sure the header overlays Leaflet maps and controls */
+.leaflet-container {
+  z-index: 0;
+}
+.leaflet-control {
+  z-index: 1000 !important;
+}
+
+.placeholder-map img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+}
+
+.placeholder-map .meta {
+  padding: 0.75rem 0.85rem;
+  color: var(--muted-ink);
+  border-top: 1px solid rgba(111, 20, 20, 0.12);
+  font-size: 0.95rem;
+}
+
+.inline-image {
+  width: min(42%, 420px);
+  float: right;
+  margin: 0.35rem 0 0.95rem 1.05rem;
+}
+
+/*
+  Inline image and credit tooltip behavior:
+  - Images float right beside content headings; captions are italic and muted.
+  - The `.credit-tooltip::after` rule creates a hidden caption overlay that
+    becomes visible (via opacity/transform transitions) when hovered.
+*/
+
+.credit-tooltip {
+  position: relative;
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(111, 20, 20, 0.25);
+}
+
+.credit-tooltip img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-description {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  font-size: 0.92em;
+  line-height: 1.45;
+  color: var(--muted-ink);
+  font-style: italic;
+}
+
+.content h3,
+.content h4 {
+  clear: both;
+}
+
+.credit-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  background: rgba(35, 16, 16, 0.93);
+  color: #fff;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.credit-tooltip:hover::after,
+.credit-tooltip:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loading,
+.error {
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.loading {
+  background: rgba(198, 162, 106, 0.16);
+}
+
+.error {
+  background: rgba(111, 20, 20, 0.14);
+}
+
+@media (max-width: 760px) {
+  .menu-bar {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+
+  .menu-bar a,
+  .dropdown-toggle {
+    padding: 0.35rem 0.65rem;
+  }
+
+  .dropdown-menu {
+    min-width: 170px;
+  }
+
+  .inline-image {
+    width: 100%;
+    float: none;
+    margin: 0.8rem 0 1rem;
+  }
+}

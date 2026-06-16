@@ -1,0 +1,41 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Castello di Poppi",
+                "name_en": "Poppi Castle",
+                "name_de": "Burg Poppi",
+                "anchor": "ca-1-castello-poppi",
+                "citySlug": "casentino",
+                "link": "?page=city&city=casentino#ca-1-castello-poppi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.7677,
+                    43.7231
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Castello di Romena",
+                "name_en": "Romena Castle",
+                "name_de": "Burg Romena",
+                "anchor": "ca-2-castello-romena",
+                "citySlug": "casentino",
+                "link": "?page=city&city=casentino#ca-2-castello-romena"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.7141,
+                    43.7800
+                ]
+            }
+        }
+    ]
+}

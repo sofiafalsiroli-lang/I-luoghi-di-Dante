@@ -1,0 +1,62 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Porta Schiavonia ",
+                "name_en": "Schiavonia Gate",
+                "name_de": "Tor Schiavonia",
+                "anchor": "fo-1-porta-schiavonia",
+                "citySlug": "forli",
+                "link": "?page=city&city=forli#fo-1-porta-schiavonia"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.0287,
+                    44.2263
+                ],
+                "type": "Point"
+            },
+            "id": 0
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Palazzo Paulucci di Calboli d'Aste",
+                "name_en": "Paulucci di Calboli d'Aste Palace",
+                "name_de": "Palast Paulucci di Calboli d'Aste",
+                "anchor": "fo-2-palazzo-aste",
+                "citySlug": "forli",
+                "link": "?page=city&city=forli#fo-2-palazzo-aste"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.0424,
+                    44.223
+                ],
+                "type": "Point"
+            },
+            "id": 1
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Piazza Saffi",
+                "name_en": "Saffi Square",
+                "name_de": "Saffi Platz",
+                "anchor": "fo-3-piazza-saffi",
+                "citySlug": "forli",
+                "link": "?page=city&city=forli#fo-3-piazza-saffi"
+            },
+            "geometry": {
+                "coordinates": [
+                    12.041,
+                    44.2225
+                ],
+                "type": "Point"
+            },
+            "id": 2
+        }
+    ]
+}

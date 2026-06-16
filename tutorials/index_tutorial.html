@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Tutorial copy: index_tutorial.html
+
+  Purpose:
+  - This file is a commented, tutorial version of the project's main `index.html`.
+  - It explains the structure and how the pieces (CSS, JS, data) fit together.
+
+  How to use:
+  - Open this file in a browser or in the editor to read inline documentation.
+  - The live site uses `styles.css`, `app.js` and `interactive-map.js` from the project root.
+
+  Notes on assets and dependencies:
+  - `styles.css`: contains the look-and-feel for layout, colors, and responsive rules.
+  - `interactive-map.js`: initializes the Leaflet map and loads geojson files from `data/coordinates/`.
+  - `app.js`: handles page routing, language selection, and inserting markdown content from `texts/`.
+  - External libs: `leaflet` (maps) and `marked` (markdown-to-HTML).
+
+  Accessibility & semantics summary:
+  - Landmark elements (`header`, `main`, `footer`) improve navigation for assistive tech.
+  - `aria-live="polite"` on the content container informs screen readers when content updates.
+  - Language selector uses buttons with `data-lang` attributes to switch displayed text.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive educational website about Dante's exile trail across Northern Italy, with city pages, maps, and multilingual content.">
+  <title>On Dante's Trail</title>
+  <link rel="icon" type="image/svg+xml" href="data/pictures/favicon.svg">
+  <!-- Fonts: loaded from Google Fonts to provide titles and readable body type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <!-- Main stylesheet for layout, typography and responsive behaviour -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet stylesheet (external CDN) provides map control styles and defaults -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <!-- Decorative background element. `aria-hidden` hides it from assistive tech. -->
+  <div class="page-background" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <!-- Language selection: buttons with `data-lang` are used by `app.js` to switch language content. -->
+    <div class="language-bar" aria-label="Language selection" role="toolbar">
+      <button class="lang-btn" data-lang="it" type="button">Italiano</button>
+      <button class="lang-btn" data-lang="en" type="button">English</button>
+      <button class="lang-btn" data-lang="de" type="button">Deutsch</button>
+    </div>
+
+    <!-- Title block: site title and subtitle. These are static text nodes styled by CSS. -->
+    <div class="title-bar">
+      <h1 id="site-title">On Dante's Trail</h1>
+      <p id="site-subtitle">A journey through Northern Italy</p>
+    </div>
+
+    <!-- Main navigation: links use `data-page` attributes that `app.js` reads to swap views. -->
+    <nav class="menu-bar" aria-label="Main menu">
+      <a id="nav-home" href="#" data-page="home">Home</a>
+
+      <!-- Cities dropdown: populated dynamically by `app.js` from `data/coordinates/*.geojson` or `texts/` -->
+      <div class="dropdown">
+        <button id="nav-cities" class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="cities-menu">Cities</button>
+        <div id="cities-menu" class="dropdown-menu" aria-label="Cities"></div>
+      </div>
+
+      <a id="nav-map" href="#" data-page="map">Map</a>
+      <a id="nav-about" href="#" data-page="about">About</a>
+    </nav>
+  </header>
+
+  <!-- Main content area:
+       - `#content` is the dynamic container where markdown pages are rendered.
+       - `aria-live="polite"` notifies screen readers about content updates without being intrusive.
+       - Pages and city descriptions are stored under `texts/` and inserted here by `app.js`.
+  -->
+  <main class="content-shell">
+    <div class="content-card">
+      <div id="content" class="content" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <!-- Footer: contains site credit, legal link and contact. Kept semantic for accessibility. -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cell footer-brand">
+        <div class="footer-site">On Dante's Trail</div>
+        <div class="footer-copy">© 2026 On Dante's Trail</div>
+      </div>
+      <div class="footer-cell footer-link">
+        <!-- `impressum.html` is a static legal/credits page in the project root -->
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div class="footer-cell footer-link">
+        <a href="?page=about">About</a>
+      </div>
+      <div class="footer-cell footer-link">
+        <a href="mailto:sofia.falsiroli@edu.uni-graz.at">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries and application scripts: order matters -->
+  <!-- `marked` converts markdown files from `texts/` into HTML before insertion. -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- `leaflet` provides the map API used by `interactive-map.js`. Loaded before app scripts. -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Project map logic: loads geojson files and draws markers/overlays on a Leaflet map -->
+  <script src="interactive-map.js"></script>
+  <!-- App routing and UI glue: language switching, menu population, and markdown injection -->
+  <script src="app.js"></script>
+</body>
+</html>

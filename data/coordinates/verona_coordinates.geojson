@@ -1,0 +1,77 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Piazza Dante",
+                "name_en": "Dante Square",
+                "name_de": "Danteplatz",
+                "anchor": "vr-1-piazza-dante",
+                "citySlug": "verona",
+                "link": "?page=city&city=verona#vr-1-piazza-dante"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.9979,
+                    45.4435
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Chiesa di Sant'Elena",
+                "name_en": "Church of Saint Elena",
+                "name_de": "Kirche St. Helena",
+                "anchor": "vr-2-chiesa-san-elena",
+                "citySlug": "verona",
+                "link": "?page=city&city=verona#vr-2-chiesa-san-elena"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.9967,
+                    45.4475
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Casa di Romeo",
+                "name_en": "Romeo's House",
+                "name_de": "Haus von Romeo",
+                "anchor": "vr-3-casa-romeo",
+                "citySlug": "verona",
+                "link": "?page=city&city=verona#vr-3-casa-romeo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.9992,
+                    45.4435
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Porta Borsari",
+                "name_en": "Borsari Gate",
+                "name_de": "Borsari Tor",
+                "anchor": "vr-4-porta-borsari",
+                "citySlug": "verona",
+                "link": "?page=city&city=verona#vr-4-porta-borsari"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.9933,
+                    45.4419
+                ]
+            }
+        }
+    ]
+}

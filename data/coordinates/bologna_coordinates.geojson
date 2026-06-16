@@ -1,0 +1,59 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Torre della Garisenda",
+                "name_en": "Garisenda Tower",
+                "name_de": "Turm der Garisenda",
+                "anchor": "bo-1-garisenda",
+                "citySlug": "bologna",
+                "link": "?page=city&city=bologna#bo-1-garisenda"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.3467,
+                    44.4943
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Basilica di San Domenico",
+                "name_en": "Basilica of saint Dominic",
+                "name_de": "Basilika San Domenico",
+                "anchor": "bo-2-basilica-san-domenico",
+                "citySlug": "bologna",
+                "link": "?page=city&city=bologna#bo-2-basilica-san-domenico"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.3439,
+                    44.4895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name_it": "Ex convento dei Frati Gaudenti",
+                "name_en": "Former Convent of the Frati Gaudenti",
+                "name_de": "Ehemaliges Kloster der Frati Gaudenti",
+                "anchor": "bo-3-convento-frati-gaudenti",
+                "citySlug": "bologna",
+                "link": "?page=city&city=bologna#bo-3-convento-frati-gaudenti"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    11.3456,
+                    44.4873
+                ]
+            }
+        }
+    ]
+}
