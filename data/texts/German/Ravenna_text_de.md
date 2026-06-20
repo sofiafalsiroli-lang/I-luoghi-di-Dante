@@ -1,61 +1,53 @@
 # Ravenna
 
 ## Einführung
-Ravenna war die letzte Stadt, in der Dante Alighieri lebte. Er kam 1318 auf Einladung von _Francesco da Polenta_, genannt _Francesco "il Vecchio"_, der ihn in seiner Residenz aufnahm und bis zu seinem Tod 1321 beschützte.  
-Für Dante wurde Ravenna zu einem echten Zuhause, wo er in relativer Ruhe arbeiten konnte.  
-Seine Anwesenheit in der Stadt ist historisch belegt: Er erhielt eine Rente vom Stadtrat und setzte literarische sowie politische Projekte bis zu seinem Tod fort.  
-Ravenna bewahrt noch heute zahlreiche Bezüge zu seiner Erinnerung, sowohl in institutionellen Stätten als auch in Kunst und urbaner Kultur.
+Ravenna war die letzte Stadt, in der Dante Alighieri lebte: Er kam 1318 auf Einladung von Francesco da Polenta, genannt _Francesco "il Vecchio"_ ("der Ältere"), der ihn in seiner Residenz aufnahm und bis zu seinem Tod 1321 beschützte. Ravenna wurde für den Dichter zu einem echten Zuhause, in dem er in den letzten Jahren seines Lebens in relativer Ruhe arbeiten konnte.  
+Dantes Anwesenheit ist historisch belegt: Er erhielt eine Rente vom Stadtrat und setzte seine literarischen und politischen Projekte bis zu seinem Tod fort.  
+Ravenna bewahrt bis heute zahlreiche Spuren seiner Erinnerung, sowohl in institutionellen Stätten als auch in Kunst und urbaner Kultur.
 
 [Interactive map: data/coordinates/ravenna_coordinates.geojson]
 
 ## Orte in Verbindung mit Dante
+- Dantes Museum
+- Dantes Grab
+- Garten des Quadrarco di Braccioforte
+- Dante-Mural von Kobra
 
-### Dantes Museum
-<h2 id="ra-1-museo-dante">Dantes Museum</h2>
-Gegründet 1921 anlässlich des sechshundertsten Todestages und in jüngster Zeit umfassend erneuert, bietet das Museum heute eine moderne, immersive Ausstellung in mehreren Räumen, die Besucher durch Dantes Leben, Werk und Nachwirkung führt.  
+<h3 id="ra-1-museo-dante">Dantes Museum</h3>
+Das Dantes Museum in Ravenna, im ersten Stock des ehemaligen Franziskanerklosters neben dem Grab des Dichters gelegen, gehört zu den wichtigsten Orten der Erinnerung an Dante Alighieri und sein Werk. Gegründet wurde es 1921 anlässlich des sechshundertsten Todestags und in jüngster Zeit umfassend erneuert. Heute bietet das Museum einen modernen, immersiven Rundgang durch mehrere Räume, der Besucher durch Leben, Werk und Nachwirkung des Dichters führt.
 
-Die Ausstellung, gegliedert in acht thematische Räume, vereint historische Artefakte, symbolische Objekte und multimediale Installationen, um Dantes menschliche und künstlerische Erfahrung zu erzählen, mit besonderem Fokus auf die _Divina Commedia_.  
-Zu den bedeutendsten Exponaten gehören die hölzerne Kassette, die Dantes Knochen jahrhundertelang aufbewahrte, und die Arkade, die 1865 für deren Ausstellung verwendet wurde, Zeugnisse der komplexen Geschichte seiner Überreste.
+Die Ausstellung ist in acht thematische Räume gegliedert und verbindet historische Artefakte, symbolische Objekte und multimediale Installationen, um Dantes menschliche und künstlerische Erfahrung zu erzählen, mit besonderem Fokus auf die _Divina Commedia_. Zu den bedeutendsten Exponaten zählen die hölzerne Kassette, die Dantes Knochen jahrhundertelang aufbewahrte, sowie die Urne, die 1865 für deren Ausstellung genutzt wurde. Beide Zeugnisse verweisen auf die komplexe Geschichte seiner Überreste.
+
 <h3 id="ra-2-tomba-dante">Dantes Grab</h3>
+Dantes Grab in Ravenna, neben der Basilika San Francesco im Herzen der sogenannten "Zone der Stille", ist der Ort, an dem der höchste Dichter seit 1321, dem Jahr seines Todes im Exil, ruht. Ursprünglich war die Grabstätte eine schlichte Kapelle, die von Guido Novello da Polenta, dem Stadtherrn, gestiftet wurde. Im Laufe der Zeit wurde das Monument mehrfach verändert: 1483 erhielt es ein Relief von Pietro Lombardo, zwischen 1780 und 1782 entstand das heutige neoklassizistische Mausoleum nach einem Entwurf von Camillo Morigia. Im Inneren befinden sich die Urne mit Dantes Überresten sowie das lateinische Epitaph von Bernardo Canaccio, das die Größe des Dichters und sein Exil würdigt:
 
-### Dantes Grab
-Dantes Grab in Ravenna, neben der _Basilica di San Francesco_ im sogenannten „Stillen Bereich“, ist der Ort, an dem der Dichter seit 1321 ruht.  
-Ursprünglich war es eine einfache Kapelle, von _Guido Novello da Polenta_ gestiftet, die über die Jahre mehrfach umgestaltet wurde: 1483 erhielt sie ein Relief von _Pietro Lombardo_, zwischen 1780 und 1782 wurde das heutige neoklassizistische Mausoleum nach Entwurf von _Camillo Morigia_ errichtet.  
-Im Inneren befinden sich Dantes Überreste und ein lateinisches Epitaph von _Bernardo Canaccio_, das die Größe des Dichters und sein Exil würdigt:
-<h3 id="ra-3-quadrarco">Garten des _Quadrarco di Braccioforte_</h3>
-_“Iura monarchiae, superos, Phlegetonta lacusque_  
+_"Iura monarchiae, superos, Phlegetonta lacusque_  
 _lustrando cecini, voluerunt fata quousque;_  
 _sed quia pars cessit melioribus hospita castris,_  
 _actoremque suum petiit felicior astris,_  
 _hic claudor Dantes, patriis extorris ab oris_  
-<h3 id="ra-4-murales"> Dante-Mural von Kobra</h3>
+_quem genuit parvi Florentia mater amoris"_
 
-_"Die Rechte der Herrschaft, die Himmel, den Phlegethon und die Seen_    
+_"Die Rechte der Herrschaft, die Himmel, den Phlegethon und die Seen_  
 _besang ich, indem ich sie durchwanderte, so weit es das Schicksal erlaubte;_  
 _doch weil der bessere Teil in freundlichere Lager überging_  
 _und seinen Schöpfer glücklicher zu den Sternen suchte,_  
 _werde ich hier eingeschlossen, Dante, verbannt aus dem väterlichen Land,_  
-_den Florenz, die Mutter wenigster Liebe, geboren hat."_  
+_den Florenz, die Mutter wenigster Liebe, geboren hat."_
 
-Die Geschichte des Grabes ist durch komplexe Ereignisse geprägt, insbesondere Streitigkeiten zwischen Ravenna und Florenz.  
-Um Dantes Überreste zu schützen, versteckten die Franziskaner sie mehrmals, wodurch sie für lange Zeit verschwanden, bis sie im 19. Jahrhundert wiedergefunden und endgültig im Mausoleum beigesetzt wurden.
+Die Geschichte des Grabes ist durch komplexe Ereignisse geprägt, vor allem durch Streitigkeiten zwischen Ravenna und Florenz: Um Dantes Gebeine zu schützen, versteckten die Franziskaner sie mehrfach, sodass sie lange Zeit verschwanden, bis sie im 19. Jahrhundert wiedergefunden und endgültig im Mausoleum beigesetzt wurden.
 
+<h3 id="ra-3-quadrarco">Garten des Quadrarco di Braccioforte</h3>
+Der Quadrarco di Braccioforte, nahe bei Dantes Grab, ist einer der bedeutendsten Orte der Dante-Erinnerung in Ravenna. Nach Dantes Tod 1321 wurden seine Überreste zunächst in einem schlichten Sarkophag in der Kirche San Francesco aufbewahrt, auf Wunsch von Guido Novello da Polenta. 1483 wurde das Grab auf Initiative des venezianischen Statthalters Bernardo Bembo erneuert. Zwischen dem 16. und 18. Jahrhundert wurde die Geschichte der Gebeine jedoch kompliziert: Um sie vor Ansprüchen aus Florenz zu schützen, versteckten die Franziskaner sie mehrfach, wodurch sie fast zwei Jahrhunderte lang verschwunden blieben.
 
-### Garten des _Quadrarco di Braccioforte_
-Der _Quadrarco di Braccioforte_, in der Nähe von Dantes Grab gelegen, ist einer der bedeutendsten Orte der Dante-Erinnerung in Ravenna.  
-Nach Dantes Tod 1321 wurden seine Überreste zunächst in einem einfachen Sarkophag in der _Basilica di San Francesco_ aufbewahrt, auf Wunsch von _Guido Novello da Polenta_.  
-1483 wurde das Grab unter _Bernardo Bembo_, venezianischer Gouverneur, erneuert, doch zwischen dem 16. und 18. Jahrhundert wurde das Schicksal der Knochen kompliziert: Um sie vor Ansprüchen aus Florenz zu schützen, versteckten die Franziskaner sie mehrfach, etwa zwei Jahrhunderte lang.
-1677 wurden sie auch im _Quadrarco_ eingeschlossen, wie die Inschrift auf der Kassette belegt:  _"Dantis ossa a me Fra Antonio Santi hic posita anno 1677 die 18 octobris"_ ("Dantes Knochen hier von Fra' Antonio Santi am 18. Oktober 1677 platziert").  
-Nach dem Bau des neuen neoklassizistischen Mausoleums (1780–1782) kehrten die Überreste kurzzeitig zurück, doch 1810, mit der napoleonischen Auflösung der Orden, versteckten die Mönche sie erneut in einer Wand des _Quadrarco_.  
-Am 25. Mai 1865 entdeckte ein Arbeiter während Wartungsarbeiten zufällig die Kassette; dank des Studenten _Anastasio Matteucci_ wurde sie gerettet und identifiziert. Die Knochen wurden wieder zusammengesetzt, einige Monate in einer Kristallurne ausgestellt und schließlich endgültig im Mausoleum beigesetzt.  
-Während des Zweiten Weltkriegs wurden die Überreste vorsorglich zwischen 1944 und 1945 vorübergehend in einem Hügel im nahen Garten beigesetzt. Eine Tafel erinnert noch heute an diesen Schutz in schwierigen Zeiten.
+1677 wurden sie auch im Quadrarco eingemauert, wie die Inschrift auf der Kassette belegt: _"Dantis ossa a me Fra Antonio Santi hic posita anno 1677 die 18 octobris"_ ("Dantes Knochen hier von Fra' Antonio Santi am 18. Oktober 1677 platziert"). Nach dem Bau des neuen neoklassizistischen Mausoleums (1780-1782) kehrten die Überreste kurzzeitig zurück. 1810, mit der napoleonischen Auflösung der Orden, versteckten die Mönche sie erneut in einer Wand des Quadrarco.
 
+Am 25. Mai 1865 entdeckte ein Arbeiter bei Wartungsarbeiten zufällig die Kassette; dank des Studenten Anastasio Matteucci wurde sie gerettet und identifiziert. Die Knochen wurden wieder zusammengesetzt, einige Monate in einer Kristallurne ausgestellt und schließlich endgültig im Mausoleum beigesetzt. Während des Zweiten Weltkriegs wurden die Überreste zur Sicherheit zwischen 1944 und 1945 vorübergehend in einem Hügel im nahen Garten beigesetzt. Eine Tafel erinnert bis heute an dieses Ereignis und an ihren Schutz in schwierigen Zeiten.
 
-###  Dante-Mural von Kobra
-In Ravenna schuf der brasilianische Künstler _Kobra_ ein imposantes Wandbild zu Ehren des Dichters.  
-Das Werk, mit leuchtenden Farben und typischem geometrischen Stil, zeigt Dante mit seinem ikonischen ernsten Gesicht und dem Lorbeerkranz auf dem Kopf, umgeben von Details, die an die _Divina Commedia_ und die italienische Kultur erinnern.  
-Das Mural ist nicht nur ein künstlerisches Tribut, sondern auch eine Einladung, über die Verbindung der Stadt mit dem Dichter nachzudenken, der letzten Jahre Dantes in Ravenna und seinen zeitlosen kulturellen Einfluss.
+Der Quadrarco di Braccioforte nimmt damit eine zentrale Rolle in der Geschichte von Dantes Überresten ein und steht sinnbildlich für Jahrhunderte des Bewahrens, Verbergens und Wiederentdeckens.
 
+<h3 id="ra-4-murales">Dante-Mural von Kobra</h3>
+In Ravenna schuf der brasilianische Künstler Kobra ein beeindruckendes Mural zu Ehren des höchsten Dichters. Das Werk, geprägt von leuchtenden Farben und Kobras charakteristischem geometrischem Stil, zeigt Dante mit seinem ikonischen ernsten Gesicht und dem Lorbeerkranz, umgeben von Details, die an die _Divina Commedia_ und die italienische Kultur erinnern. Das Mural ist nicht nur eine künstlerische Hommage, sondern auch eine Einladung, über die Verbindung zwischen Stadt und Dichter nachzudenken: Es erinnert an Dantes letzte Lebensjahre in Ravenna und an seinen zeitlosen kulturellen Einfluss.
 
 ## Quellen
 ### Quellen für den Text
@@ -63,7 +55,4 @@ Das Mural ist nicht nur ein künstlerisches Tribut, sondern auch eine Einladung,
 - [https://it.wikipedia.org/wiki/Tomba_di_Dante](https://it.wikipedia.org/wiki/Tomba_di_Dante)  
 - [https://www.visitravenna.it/it/arte-e-cultura/murales-dante-kobra](https://www.visitravenna.it/it/arte-e-cultura/murales-dante-kobra)  
 - [https://www.artribune.com/arte-contemporanea/2023/03/kobra-dante-ravenna/](https://www.artribune.com/arte-contemporanea/2023/03/kobra-dante-ravenna/)  
-- [https://www.ravennatoday.it/arte/kobra-dante-ravenna.html](https://www.ravennatoday.it/arte/kobra-dante-ravenna.html)  
-
-
-
+- [https://www.ravennatoday.it/arte/kobra-dante-ravenna.html](https://www.ravennatoday.it/arte/kobra-dante-ravenna.html)

@@ -240,6 +240,20 @@ function extractCreditText(creditHtml) {
   return creditHtml.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 }
 
+function findFirstParagraphAfterHeading(heading) {
+  let node = heading.nextElementSibling;
+
+  while (node) {
+    if (node.matches && node.matches("p") && node.textContent.trim()) {
+      return node;
+    }
+
+    node = node.nextElementSibling;
+  }
+
+  return null;
+}
+
 function cityImagesFor(city) {
   if (!state.credits) {
     return [];
@@ -300,7 +314,12 @@ function attachCityMedia(contentEl, city, lang) {
     figure.appendChild(link);
     figure.appendChild(caption);
 
-    heading.insertAdjacentElement("afterend", figure);
+    const targetParagraph = findFirstParagraphAfterHeading(heading);
+    if (targetParagraph) {
+      targetParagraph.insertAdjacentElement("afterend", figure);
+    } else {
+      heading.insertAdjacentElement("afterend", figure);
+    }
     imageIndex += 1;
   });
 
@@ -621,23 +640,25 @@ function bindEvents() {
   const cityToggle = document.getElementById("nav-cities");
   const cityMenu = document.getElementById("cities-menu");
 
+  const setCityMenuOpen = (open) => {
+    cityMenu.hidden = !open;
+    cityMenu.classList.toggle("open", open);
+    cityToggle.setAttribute("aria-expanded", String(open));
+  };
+
   cityToggle.addEventListener("click", () => {
-    const isOpen = cityMenu.hidden;
-    cityMenu.hidden = !isOpen;
-    cityToggle.setAttribute("aria-expanded", String(isOpen));
+    setCityMenuOpen(cityMenu.hidden);
   });
 
   document.addEventListener("click", (event) => {
     if (!event.target.closest(".dropdown")) {
-      cityMenu.hidden = true;
-      cityToggle.setAttribute("aria-expanded", "false");
+      setCityMenuOpen(false);
     }
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      cityMenu.hidden = true;
-      cityToggle.setAttribute("aria-expanded", "false");
+      setCityMenuOpen(false);
       cityToggle.focus();
     }
   });

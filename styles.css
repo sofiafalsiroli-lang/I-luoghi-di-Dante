@@ -359,8 +359,10 @@ button:focus-visible {
 
 .inline-image {
   width: 100%;
+  max-width: 100%;
   float: none;
-  margin: 0.8rem 0 1rem;
+  clear: both;
+  margin: 0.9rem 0 1.15rem;
 }
 
 .credit-tooltip {
@@ -560,9 +562,10 @@ button:focus-visible {
   }
 
   .inline-image {
-    width: min(44%, 380px);
-    float: right;
-    margin: 0.35rem 0 0.95rem 1.05rem;
+    width: min(46%, 380px);
+    max-width: 380px;
+    float: none;
+    margin: 0.9rem 0 1.15rem;
   }
 }
 
@@ -620,6 +623,7 @@ button:focus-visible {
   }
 
   .inline-image {
-    width: min(40%, 430px);
+    width: min(42%, 430px);
+    max-width: 430px;
   }
 }

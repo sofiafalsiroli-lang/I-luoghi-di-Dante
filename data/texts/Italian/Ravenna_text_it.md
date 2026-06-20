@@ -7,7 +7,7 @@ Ravenna conserva tuttora numerosi riferimenti alla sua memoria, sia in luoghi is
 
 [Interactive map: data/coordinates/ravenna_coordinates.geojson]
 
-#### Luoghi dedicati a Dante
+## Luoghi dedicati a Dante
 - Museo Dante
 - Tomba di Dante
 - Quadrarco di Braccioforte
