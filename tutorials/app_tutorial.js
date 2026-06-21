@@ -37,7 +37,8 @@ const TRANSLATIONS = {
     loading: "Caricamento contenuti...",
     missingContent: "Contenuto non disponibile.",
     imageAlt: "Immagine",
-    mapCreditsLabel: "Crediti mappa"
+    mapCreditsLabel: "Crediti mappa",
+    mapHoverHint: "Clicca sui segnaposti rossi per scoprire in quale citt\u00e0 Dante fu ospitato."
   },
   en: {
     siteSubtitle: "A journey through Northern Italy",
@@ -49,7 +50,8 @@ const TRANSLATIONS = {
     loading: "Loading content...",
     missingContent: "Content is not available.",
     imageAlt: "Image",
-    mapCreditsLabel: "Map credits"
+    mapCreditsLabel: "Map credits",
+    mapHoverHint: "Click the red markers to find out in which city Dante was hosted."
   },
   de: {
     siteTitle: "Auf Dantes Spuren",
@@ -62,7 +64,8 @@ const TRANSLATIONS = {
     loading: "Inhalte werden geladen...",
     missingContent: "Inhalt nicht verf\u00fcgbar.",
     imageAlt: "Bild",
-    mapCreditsLabel: "Karten-Credits"
+    mapCreditsLabel: "Karten-Credits",
+    mapHoverHint: "Klicke auf die roten Markierungen, um herauszufinden, in welcher Stadt Dante zu Gast war."
   }
 };
 
@@ -136,8 +139,7 @@ const state = {
   lang: pickInitialLanguage(),
   page: "home",
   city: "bologna",
-  credits: null,
-  mapCredits: ""
+  credits: null
 };
 
 function pickInitialLanguage() {
@@ -207,12 +209,8 @@ function textPathFor(page, citySlug, lang) {
 }
 
 async function loadInitialData() {
-  const [creditsResponse, mapCreditsResponse] = await Promise.all([
-    fetch("data/pictures/credits.json"),
-    fetch("data/pictures/map_placeholder_credits.txt")
-  ]);
+  const creditsResponse = await fetch("data/pictures/credits.json");
   state.credits = await creditsResponse.json();
-  state.mapCredits = await mapCreditsResponse.text();
 }
 
 function normalizeText(text) {
@@ -363,12 +361,13 @@ function markActiveNav() {
 
 // Render a lightweight overview map placeholder element that `initOverviewMap`
 // will replace. Ensures a predictable DOM target (`#overview-map`).
-function renderMapPlaceholder(lang, mapCredits) {
+function renderMapPlaceholder(lang) {
   const content = document.getElementById('content');
   if (!content) return;
   // Render only the DOM container that the overview map script will attach to.
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   content.innerHTML = `
-    <section class="overview-map-section">
+    <section class="overview-map-section" data-tooltip="${t.mapHoverHint}">
       <div id="overview-map" class="overview-map" data-geojson-path="data/coordinates/overview_map.geojson" style="width:100%;height:520px"></div>
     </section>`;
 }
@@ -579,7 +578,7 @@ async function renderPage() {
   renderShellText();
 
   if (state.page === "map") {
-    renderMapPlaceholder(state.lang, state.mapCredits);
+    renderMapPlaceholder(state.lang);
     if (window.initOverviewMap) {
       // initialize interactive overview map (loads Overview_map.geojson)
       try {

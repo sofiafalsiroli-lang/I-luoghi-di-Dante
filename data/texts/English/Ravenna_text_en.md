@@ -11,9 +11,9 @@ Ravenna still preserves numerous references to his memory today, both in institu
 - Dante's Museum  
 - Tomb of Dante  
 - Quadrarco of Braccioforte Garden 
-- Kobra’s Dante murals  
+- [Kobra’s Dante murals](#ra-4-murales) 
 
-<h2 id="ra-1-museo-dante">Dante Museum</h2>
+<h3 id="ra-1-museo-dante">Dante Museum</h3>
 The Dante Museum in Ravenna, located on the first floor of the ancient Franciscan convent next to the Poet's Tomb, is one of the main sites dedicated to the memory and works of Dante Alighieri. Founded in 1921 on the occasion of the sixth centenary of his death and extensively renovated in recent times, the museum now offers a modern and immersive exhibition path divided into several rooms, guiding visitors through the life, works, and legacy of the poet over time.
 
 The exhibition, organized into eight thematic rooms, combines historical artifacts, symbolic objects, and multimedia installations to tell the human and artistic experience of Dante, with particular focus on the _Divina Commedia_. Among the most significant items preserved are the wooden box that once held the poet’s bones for centuries and the urn used for their display in 1865, both of which testify to the complex history surrounding his remains.

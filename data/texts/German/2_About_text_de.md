@@ -1,4 +1,4 @@
-# Die Webite
+# Die Website
 Diese Website wurde im Rahmen eines Webentwicklungsprojekts für den Kurs „Web-Entwicklung (Agentic Coding. LLM-gestützte Webentwicklung in der Praxis)“ an der Universität Graz (Österreich) erstellt.
 
 ## Code

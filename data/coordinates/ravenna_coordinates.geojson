@@ -9,7 +9,7 @@
                 "name_de": "Dantes Museum",
                 "anchor": "ra-1-museo-dante",
                 "citySlug": "ravenna",
-                "link": "?page=city&city=ravenna#dantes-museum"
+                "link": "?page=city&city=ravenna#ra-1-museo-dante"
             },
             "geometry": {
                 "type": "Point",
@@ -27,7 +27,7 @@
                 "name_de": "Dantes Grab",
                 "anchor": "ra-2-tomba-dante",
                 "citySlug": "ravenna",
-                "link": "?page=city&city=ravenna#tomb-of-dante"
+                "link": "?page=city&city=ravenna#ra-2-tomba-dante"
             },
             "geometry": {
                 "type": "Point",
@@ -45,7 +45,7 @@
                 "name_de": "Garten des Quadrarco di Braccioforte",
                 "anchor": "ra-3-quadrarco",
                 "citySlug": "ravenna",
-                "link": "?page=city&city=ravenna#quadrarco-of-braccioforte-garden"
+                "link": "?page=city&city=ravenna#ra-3-quadrarco"
             },
             "geometry": {
                 "type": "Point",
@@ -63,7 +63,7 @@
                 "name_de": "Dante-Mural von Kobra",
                 "anchor": "ra-4-murales",
                 "citySlug": "ravenna",
-                "link": "?page=city&city=ravenna#kobras-dante-murals"
+                "link": "?page=city&city=ravenna#ra-4-murales"
             },
             "geometry": {
                 "type": "Point",

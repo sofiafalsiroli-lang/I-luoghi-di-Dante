@@ -37,9 +37,30 @@ button {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 2px solid #111;
   outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  z-index: 10001;
+  padding: 0.5rem 0.75rem;
+  background: #fffaf7;
+  color: var(--deep-red);
+  border: 1px solid rgba(111, 20, 20, 0.28);
+  border-radius: 10px;
+  text-decoration: none;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 .page-background {
@@ -357,6 +378,75 @@ button:focus-visible {
   margin: 0 0 1.25rem;
 }
 
+.map-page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.map-city-list {
+  flex: 0 0 14rem;
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid rgba(111, 20, 20, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 250, 244, 0.72);
+}
+
+.map-city-list h2 {
+  margin-bottom: 0.7rem;
+}
+
+.map-city-links {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.map-city-links li + li {
+  margin-top: 0.45rem;
+}
+
+.map-city-links a {
+  color: var(--deep-red);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.map-city-links a:hover {
+  color: #6d130f;
+}
+
+.overview-map-section {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+}
+
+.overview-map-section::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 2;
+  background: rgba(35, 16, 16, 0.93);
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.overview-map-section:hover::after,
+.overview-map-section:focus-within::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .inline-image {
   width: 100%;
   max-width: 100%;
@@ -477,6 +567,19 @@ button:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .map-page-layout {
+    flex-direction: column;
+  }
+
+  .map-city-list {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .overview-map-section {
+    width: 100%;
+  }
+
   .footer-inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.25rem 0.4rem;
