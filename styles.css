@@ -297,6 +297,88 @@ textarea:focus-visible {
   clear: both;
 }
 
+.content--city-page {
+  max-width: 1020px;
+}
+
+.content--city-page > h1:first-child,
+.content--city-page > h2:first-child {
+  margin-bottom: 1.15rem;
+}
+
+.content--city-page > h1:first-child {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  letter-spacing: 0.03em;
+}
+
+.content--city-page > h2:first-child {
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+}
+
+.city-section {
+  margin: 0 0 3.75rem;
+}
+
+.city-section--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 21rem);
+  grid-template-areas: "content figure";
+  align-items: start;
+  gap: 2.1rem 2.8rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.city-section--with-image + .city-section {
+  margin-top: 0;
+}
+
+.city-section-content {
+  grid-area: content;
+  min-width: 0;
+  max-width: none;
+}
+
+.city-section--with-image .city-section-content {
+  max-width: 54ch;
+}
+
+.city-section-content > :first-child {
+  margin-top: 0;
+}
+
+.city-section-content > :last-child {
+  margin-bottom: 0;
+}
+
+.city-section--with-image .inline-image {
+  grid-area: figure;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  justify-self: end;
+  align-self: start;
+}
+
+.city-section--with-image .credit-tooltip {
+  aspect-ratio: 16 / 11;
+}
+
+.city-section--with-image .credit-tooltip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.city-section--with-image .image-description {
+  margin-top: 0.7rem;
+  font-size: 0.87em;
+}
+
 .site-footer {
   background: linear-gradient(95deg, #8b1f19, #a32620);
   border-top: 1px solid rgba(0, 0, 0, 0.09);
@@ -701,6 +783,24 @@ textarea:focus-visible {
     line-height: 1.75;
   }
 
+  .content--city-page {
+    max-width: 960px;
+  }
+
+  .city-section--with-image {
+    grid-template-columns: minmax(0, 1fr) minmax(19rem, 23rem);
+    gap: 2.35rem 3rem;
+    padding: 0;
+  }
+
+  .city-section-content {
+    max-width: none;
+  }
+
+  .city-section--with-image .city-section-content {
+    max-width: 56ch;
+  }
+
   .site-footer {
     position: fixed;
     left: 0;
@@ -725,8 +825,35 @@ textarea:focus-visible {
     padding-inline: 2.4rem;
   }
 
+  .content--city-page {
+    max-width: 1040px;
+  }
+
   .inline-image {
-    width: min(42%, 430px);
-    max-width: 430px;
+    width: min(41%, 420px);
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .city-section--with-image {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "figure"
+      "content";
+    gap: 1.05rem;
+    padding: 0;
+  }
+
+  .city-section-content {
+    max-width: none;
+  }
+
+  .city-section--with-image .inline-image {
+    justify-self: stretch;
+  }
+
+  .city-section--with-image .credit-tooltip {
+    aspect-ratio: 5 / 4;
   }
 }

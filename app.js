@@ -286,6 +286,40 @@ function cityImagesFor(city) {
     }));
 }
 
+function wrapCitySections(contentEl) {
+  const headings = [...contentEl.querySelectorAll("h3")];
+
+  headings.forEach((heading) => {
+    if (heading.closest(".city-section")) {
+      return;
+    }
+
+    const section = document.createElement("section");
+    section.className = "city-section";
+
+    const text = document.createElement("div");
+    text.className = "city-section-content";
+
+    heading.parentNode.insertBefore(section, heading);
+    section.appendChild(text);
+    text.appendChild(heading);
+
+    let node = section.nextSibling;
+    while (node) {
+      if (node.nodeType === 1 && /^H[1-6]$/.test(node.tagName)) {
+        const nextLevel = Number(node.tagName.slice(1));
+        if (nextLevel <= 3) {
+          break;
+        }
+      }
+
+      const next = node.nextSibling;
+      text.appendChild(node);
+      node = next;
+    }
+  });
+}
+
 function attachCityMedia(contentEl, city, lang) {
   const images = cityImagesFor(city);
   let imageIndex = 0;
@@ -327,11 +361,17 @@ function attachCityMedia(contentEl, city, lang) {
     figure.appendChild(link);
     figure.appendChild(caption);
 
-    const targetParagraph = findFirstParagraphAfterHeading(heading);
-    if (targetParagraph) {
-      targetParagraph.insertAdjacentElement("afterend", figure);
+    const section = heading.closest(".city-section");
+    if (section) {
+      section.appendChild(figure);
+      section.classList.add("city-section--with-image");
     } else {
-      heading.insertAdjacentElement("afterend", figure);
+      const targetParagraph = findFirstParagraphAfterHeading(heading);
+      if (targetParagraph) {
+        targetParagraph.insertAdjacentElement("afterend", figure);
+      } else {
+        heading.insertAdjacentElement("afterend", figure);
+      }
     }
     imageIndex += 1;
   });
@@ -365,6 +405,7 @@ function markActiveNav() {
 function renderMapPlaceholder(lang) {
   const content = document.getElementById('content');
   if (!content) return;
+  content.classList.remove("content--city-page");
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   const cityLinks = CITIES.map((city) => {
     const href = `?lang=${encodeURIComponent(lang)}&page=city&city=${encodeURIComponent(city.slug)}`;
@@ -523,6 +564,7 @@ async function renderMarkdownPage(path, options = {}) {
 
     const html = marked.parse(markdown, { gfm: true, breaks: true });
     content.innerHTML = html;
+    content.classList.toggle("content--city-page", Boolean(options.city));
 
     // Keep exactly one page-level H1 (the shell title) by demoting
     // markdown-generated H1 headings to H2 in dynamic content.
@@ -559,6 +601,7 @@ async function renderMarkdownPage(path, options = {}) {
     }
 
     if (options.city) {
+      wrapCitySections(content);
       attachCityMedia(content, options.city, state.lang);
     }
 
