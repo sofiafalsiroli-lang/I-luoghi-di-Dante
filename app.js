@@ -294,8 +294,16 @@ function wrapCitySections(contentEl) {
       return;
     }
 
+    const headingText = normalizeText(heading.textContent || "");
+    const isSourcesSection = ["sources", "fonti", "quellen"].some((keyword) =>
+      headingText.startsWith(keyword)
+    );
+
     const section = document.createElement("section");
     section.className = "city-section";
+    if (isSourcesSection) {
+      section.classList.add("city-section--sources");
+    }
 
     const text = document.createElement("div");
     text.className = "city-section-content";

@@ -298,7 +298,8 @@ textarea:focus-visible {
 }
 
 .content--city-page {
-  max-width: 1020px;
+  max-width: 980px;
+  line-height: 1.78;
 }
 
 .content--city-page > h1:first-child,
@@ -316,20 +317,28 @@ textarea:focus-visible {
 }
 
 .city-section {
-  margin: 0 0 3.75rem;
+  margin: 0 0 3rem;
+  padding: clamp(1.2rem, 2.1vw, 1.8rem);
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.94), rgba(255, 246, 238, 0.88));
+  border: 1px solid rgba(110, 29, 22, 0.16);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.city-section--sources {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .city-section--with-image {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 21rem);
+  grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 21rem);
   grid-template-areas: "content figure";
   align-items: start;
-  gap: 2.1rem 2.8rem;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  gap: 1.35rem 2.25rem;
 }
 
 .city-section--with-image + .city-section {
@@ -343,7 +352,21 @@ textarea:focus-visible {
 }
 
 .city-section--with-image .city-section-content {
-  max-width: 54ch;
+  max-width: 64ch;
+}
+
+.city-section-content > p,
+.city-section-content > ul,
+.city-section-content > ol,
+.city-section-content > blockquote,
+.city-section-content > table,
+.city-section-content > .sources-section,
+.city-section-content > .sources-section > p {
+  max-width: 64ch;
+}
+
+.city-section-content > .sources-section {
+  max-width: none;
 }
 
 .city-section-content > :first-child {
@@ -358,7 +381,7 @@ textarea:focus-visible {
   grid-area: figure;
   width: 100%;
   max-width: none;
-  margin: 0;
+  margin: 0.15rem 0 0;
   justify-self: end;
   align-self: start;
 }
@@ -375,7 +398,7 @@ textarea:focus-visible {
 }
 
 .city-section--with-image .image-description {
-  margin-top: 0.7rem;
+  margin-top: 0.65rem;
   font-size: 0.87em;
 }
 
@@ -746,6 +769,10 @@ textarea:focus-visible {
     font-size: clamp(1.08rem, 0.45vw + 0.98rem, 1.2rem);
   }
 
+  .content--city-page {
+    max-width: 960px;
+  }
+
   .inline-image {
     width: min(46%, 380px);
     max-width: 380px;
@@ -789,8 +816,7 @@ textarea:focus-visible {
 
   .city-section--with-image {
     grid-template-columns: minmax(0, 1fr) minmax(19rem, 23rem);
-    gap: 2.35rem 3rem;
-    padding: 0;
+    gap: 1.5rem 2.6rem;
   }
 
   .city-section-content {
@@ -798,7 +824,7 @@ textarea:focus-visible {
   }
 
   .city-section--with-image .city-section-content {
-    max-width: 56ch;
+    max-width: 64ch;
   }
 
   .site-footer {
@@ -836,13 +862,16 @@ textarea:focus-visible {
 }
 
 @media (max-width: 767px) {
+  .content--city-page {
+    max-width: 100%;
+  }
+
   .city-section--with-image {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "figure"
       "content";
-    gap: 1.05rem;
-    padding: 0;
+    gap: 0.95rem;
   }
 
   .city-section-content {
