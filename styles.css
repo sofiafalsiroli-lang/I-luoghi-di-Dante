@@ -397,6 +397,44 @@ textarea:focus-visible {
   object-position: center top;
 }
 
+.city-section--with-image .credit-tooltip--bologna-1,
+.city-section--with-image .credit-tooltip--lunigiana-2,
+.city-section--with-image .credit-tooltip--ravenna-1,
+.city-section--with-image .credit-tooltip--ravenna-2,
+.city-section--with-image .credit-tooltip--ravenna-4 {
+  border-radius: 12px;
+}
+
+.city-section--with-image .credit-tooltip--bologna-1 {
+  aspect-ratio: 11 / 16;
+}
+
+.city-section--with-image .credit-tooltip--lunigiana-2 {
+  aspect-ratio: 4 / 5;
+}
+
+.city-section--with-image .credit-tooltip--ravenna-1 {
+  aspect-ratio: 3 / 4;
+}
+
+.city-section--with-image .credit-tooltip--ravenna-2 {
+  aspect-ratio: 2 / 3;
+}
+
+.city-section--with-image .credit-tooltip--ravenna-4 {
+  aspect-ratio: 9 / 16;
+}
+
+.city-section--with-image .credit-tooltip--bologna-1 img,
+.city-section--with-image .credit-tooltip--lunigiana-2 img,
+.city-section--with-image .credit-tooltip--ravenna-1 img,
+.city-section--with-image .credit-tooltip--ravenna-2 img,
+.city-section--with-image .credit-tooltip--ravenna-4 img {
+  object-fit: contain;
+  object-position: center;
+  border-radius: inherit;
+}
+
 .city-section--with-image .image-description {
   margin-top: 0.65rem;
   font-size: 0.87em;
