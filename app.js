@@ -354,12 +354,27 @@ function attachCityMedia(contentEl, city, lang) {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.className = "credit-tooltip";
-    link.setAttribute("data-tooltip", tooltipText);
-
     const img = document.createElement("img");
     const imageDescription = item.credit?.description?.[lang] || item.credit?.place || item.fileName;
     img.alt = imageDescription;
+
+    const updateImageOrientation = () => {
+      const width = img.naturalWidth || img.width;
+      const height = img.naturalHeight || img.height;
+      if (!width || !height) {
+        return;
+      }
+
+      link.classList.toggle("credit-tooltip--portrait", height > width);
+    };
+
+    img.addEventListener("load", updateImageOrientation);
     img.src = item.path;
+    if (img.complete) {
+      updateImageOrientation();
+    }
+
+    link.setAttribute("data-tooltip", tooltipText);
 
     const caption = document.createElement("figcaption");
     caption.className = "image-description";

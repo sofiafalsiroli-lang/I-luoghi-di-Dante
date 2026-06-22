@@ -395,41 +395,16 @@ textarea:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  border-radius: inherit;
 }
 
-.city-section--with-image .credit-tooltip--bologna-1,
-.city-section--with-image .credit-tooltip--lunigiana-2,
-.city-section--with-image .credit-tooltip--ravenna-1,
-.city-section--with-image .credit-tooltip--ravenna-2,
-.city-section--with-image .credit-tooltip--ravenna-4 {
-  border-radius: 12px;
+.city-section--with-image .credit-tooltip--portrait {
+  aspect-ratio: auto;
 }
 
-.city-section--with-image .credit-tooltip--bologna-1 {
-  aspect-ratio: 11 / 16;
-}
-
-.city-section--with-image .credit-tooltip--lunigiana-2 {
-  aspect-ratio: 4 / 5;
-}
-
-.city-section--with-image .credit-tooltip--ravenna-1 {
-  aspect-ratio: 3 / 4;
-}
-
-.city-section--with-image .credit-tooltip--ravenna-2 {
-  aspect-ratio: 2 / 3;
-}
-
-.city-section--with-image .credit-tooltip--ravenna-4 {
-  aspect-ratio: 9 / 16;
-}
-
-.city-section--with-image .credit-tooltip--bologna-1 img,
-.city-section--with-image .credit-tooltip--lunigiana-2 img,
-.city-section--with-image .credit-tooltip--ravenna-1 img,
-.city-section--with-image .credit-tooltip--ravenna-2 img,
-.city-section--with-image .credit-tooltip--ravenna-4 img {
+.city-section--with-image .credit-tooltip--portrait img {
+  width: 100%;
+  height: auto;
   object-fit: contain;
   object-position: center;
   border-radius: inherit;
@@ -610,6 +585,7 @@ textarea:focus-visible {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: inherit;
 }
 
 .image-description {
