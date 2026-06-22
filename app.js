@@ -354,14 +354,6 @@ function attachCityMedia(contentEl, city, lang) {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.className = "credit-tooltip";
-    const imageKeyClass = item.fileName
-      .toLowerCase()
-      .replace(/\.[^.]+$/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "");
-    if (imageKeyClass) {
-      link.classList.add(`credit-tooltip--${imageKeyClass}`);
-    }
     link.setAttribute("data-tooltip", tooltipText);
 
     const img = document.createElement("img");

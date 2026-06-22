@@ -904,6 +904,18 @@ textarea:focus-visible {
     max-width: 100%;
   }
 
+  .city-section-content > .sources-section,
+  .city-section-content > .sources-section > p {
+    width: 100%;
+    max-width: none;
+  }
+
+  .city-section-content > .sources-section,
+  .city-section-content > .sources-section a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .city-section--with-image {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
